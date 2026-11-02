@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -5,24 +7,43 @@ plugins {
 }
 
 android {
-    namespace = "dev.local.retromusic"
+    namespace = "io.github.tima22814.retromusic"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "dev.local.retromusic"
+        applicationId = "io.github.tima22814.retromusic"
         minSdk = 26
         targetSdk = 35
         versionCode = 13
         versionName = "1.12"
     }
 
+    // The release key lives outside the repo. Without it (e.g. on F-Droid's build
+    // server) the release APK is left unsigned and signed by whoever distributes it.
+    val keyProps = file("${System.getProperty("user.home")}/.android-keys/retromusic.properties")
+    signingConfigs {
+        if (keyProps.exists()) {
+            val p = Properties().apply { keyProps.inputStream().use { load(it) } }
+            create("release") {
+                storeFile = file(p.getProperty("storeFile"))
+                storePassword = p.getProperty("storePassword")
+                keyAlias = p.getProperty("keyAlias")
+                keyPassword = p.getProperty("keyPassword")
+            }
+        }
+    }
+
     buildTypes {
-        // Compose is sluggish in debug builds, so the installable APK is a release
-        // build signed with the local debug key.
         release {
             isMinifyEnabled = false
-            signingConfig = signingConfigs.getByName("debug")
+            signingConfig = signingConfigs.findByName("release")
         }
+    }
+
+    dependenciesInfo {
+        // F-Droid / IzzyOnDroid reject the encrypted Google dependency blob.
+        includeInApk = false
+        includeInBundle = false
     }
 
     compileOptions {

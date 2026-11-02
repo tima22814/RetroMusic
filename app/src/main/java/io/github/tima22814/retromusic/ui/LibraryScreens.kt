@@ -1,4 +1,4 @@
-package dev.local.retromusic.ui
+package io.github.tima22814.retromusic.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -39,12 +39,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import dev.local.retromusic.Album
-import dev.local.retromusic.ArtLoader
-import dev.local.retromusic.Library
-import dev.local.retromusic.PlaybackState
-import dev.local.retromusic.PlayerViewModel
-import dev.local.retromusic.Track
+import io.github.tima22814.retromusic.Album
+import io.github.tima22814.retromusic.ArtLoader
+import io.github.tima22814.retromusic.Library
+import io.github.tima22814.retromusic.PlaybackState
+import io.github.tima22814.retromusic.PlayerViewModel
+import io.github.tima22814.retromusic.Track
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

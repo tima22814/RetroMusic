@@ -1,4 +1,4 @@
-package dev.local.retromusic.ui
+package io.github.tima22814.retromusic.ui
 
 import android.content.Context
 import android.media.AudioManager
@@ -55,8 +55,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.Player
-import dev.local.retromusic.PlaybackState
-import dev.local.retromusic.PlayerViewModel
+import io.github.tima22814.retromusic.PlaybackState
+import io.github.tima22814.retromusic.PlayerViewModel
 
 @Composable
 fun NowPlaying(vm: PlayerViewModel, state: PlaybackState, onBack: () -> Unit) = AlwaysDark {

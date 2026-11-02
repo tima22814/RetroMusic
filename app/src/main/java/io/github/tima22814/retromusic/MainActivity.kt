@@ -1,4 +1,4 @@
-package dev.local.retromusic
+package io.github.tima22814.retromusic
 
 import android.Manifest
 import android.content.pm.PackageManager
@@ -37,16 +37,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import dev.local.retromusic.ui.C
-import dev.local.retromusic.ui.DarkPalette
-import dev.local.retromusic.ui.LightPalette
-import dev.local.retromusic.ui.LocalPalette
+import io.github.tima22814.retromusic.ui.C
+import io.github.tima22814.retromusic.ui.DarkPalette
+import io.github.tima22814.retromusic.ui.LightPalette
+import io.github.tima22814.retromusic.ui.LocalPalette
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.graphics.Color
-import dev.local.retromusic.ui.CoverFlow
-import dev.local.retromusic.ui.GlossButton
-import dev.local.retromusic.ui.LibraryUi
-import dev.local.retromusic.ui.NowPlaying
+import io.github.tima22814.retromusic.ui.CoverFlow
+import io.github.tima22814.retromusic.ui.GlossButton
+import io.github.tima22814.retromusic.ui.LibraryUi
+import io.github.tima22814.retromusic.ui.NowPlaying
 
 class MainActivity : ComponentActivity() {
     private val vm: PlayerViewModel by viewModels()

@@ -1,4 +1,4 @@
-package dev.local.retromusic.ui
+package io.github.tima22814.retromusic.ui
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.Animatable
@@ -63,10 +63,10 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import dev.local.retromusic.Library
-import dev.local.retromusic.PlaybackState
-import dev.local.retromusic.PlayerViewModel
-import dev.local.retromusic.Track
+import io.github.tima22814.retromusic.Library
+import io.github.tima22814.retromusic.PlaybackState
+import io.github.tima22814.retromusic.PlayerViewModel
+import io.github.tima22814.retromusic.Track
 import kotlinx.coroutines.launch
 import kotlin.math.abs
 import kotlin.math.roundToInt
@@ -356,7 +356,7 @@ private fun RoundButton(modifier: Modifier, onClick: () -> Unit, content: @Compo
 
 /** Back of a flipped cover: the album's songs on a dark glass panel. */
 @Composable
-private fun AlbumPanel(vm: PlayerViewModel, album: dev.local.retromusic.Album, current: Track?, onDone: () -> Unit) {
+private fun AlbumPanel(vm: PlayerViewModel, album: io.github.tima22814.retromusic.Album, current: Track?, onDone: () -> Unit) {
     val shape = RoundedCornerShape(8.dp)
     Column(
         Modifier
@@ -398,7 +398,7 @@ private fun AlbumPanel(vm: PlayerViewModel, album: dev.local.retromusic.Album, c
 }
 
 @Composable
-private fun AlbumSongs(vm: PlayerViewModel, album: dev.local.retromusic.Album, current: Track?, modifier: Modifier) {
+private fun AlbumSongs(vm: PlayerViewModel, album: io.github.tima22814.retromusic.Album, current: Track?, modifier: Modifier) {
     LazyColumn(modifier) {
         itemsIndexed(album.songs, key = { _, t -> t.id }) { i, t ->
             val playing = current?.id == t.id

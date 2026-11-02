@@ -1,0 +1,13 @@
+Retro Music is a simple offline music player for the songs stored on your phone, styled after the glossy music players of the mid-2000s.
+
+<b>Features</b>
+<ul>
+<li>Library by artists, albums and songs with a quick A–Z index</li>
+<li>Cover Flow album carousel when the phone is turned sideways</li>
+<li>Now Playing screen with the queue on the back of the cover</li>
+<li>Shuffle, background playback, notification and lock screen controls</li>
+<li>Hide albums or folders from the library without deleting files</li>
+<li>Light (classic) and dark themes</li>
+</ul>
+
+No internet access, no ads, no tracking.

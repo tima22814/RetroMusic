@@ -1,4 +1,4 @@
-package dev.local.retromusic.ui
+package io.github.tima22814.retromusic.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

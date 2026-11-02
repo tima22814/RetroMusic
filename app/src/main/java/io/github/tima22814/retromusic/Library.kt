@@ -1,4 +1,4 @@
-package dev.local.retromusic
+package io.github.tima22814.retromusic
 
 import android.content.ContentUris
 import android.content.Context
