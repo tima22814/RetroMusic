@@ -35,8 +35,11 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
-            signingConfig = signingConfigs.findByName("release")
+            // Shrink and optimize, but keep class names readable (no obfuscation).
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            if (keyProps.exists()) signingConfig = signingConfigs.getByName("release")
         }
     }
 
