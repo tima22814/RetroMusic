@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Thư viện</string>
+    <string name="now_playing">Đang\nphát</string>
+    <string name="queue">Hàng đợi · %s</string>
+    <string name="position">%1$d/%2$d</string>
+    <string name="no_albums">Chưa có album nào.</string>
+    <string name="done">Xong</string>
+    <string name="songs_minutes">%1$s, %2$d phút</string>
+    <string name="permission">Trình phát cần quyền truy cập nhạc trên điện thoại để hiển thị bài hát của bạn.</string>
+    <string name="allow">Cho phép</string>
+    <string name="unknown_artist">Nghệ sĩ không xác định</string>
+    <string name="default_folder">Nhạc</string>
+    <string name="various_artists">Nhiều nghệ sĩ</string>
+    <string name="folders">Thư mục</string>
+    <string name="artists">Nghệ sĩ</string>
+    <string name="albums">Album</string>
+    <string name="songs">Bài hát</string>
+    <string name="genres">Thể loại</string>
+    <string name="more">Thêm</string>
+    <string name="hidden">Đã ẩn</string>
+    <string name="hide_album_q">Ẩn album?</string>
+    <string name="hide_album_msg">“%s” sẽ biến mất khỏi thư viện. Tệp vẫn còn trên điện thoại, bạn có thể khôi phục trong “Thêm → Đã ẩn”.</string>
+    <string name="hide">Ẩn</string>
+    <string name="hide_folder_q">Ẩn thư mục?</string>
+    <string name="hide_folder_msg">Mọi bài hát trong thư mục “%s” sẽ biến mất khỏi thư viện. Tệp vẫn còn trên điện thoại, bạn có thể khôi phục trong “Thêm → Đã ẩn”.</string>
+    <string name="back">Quay lại</string>
+    <string name="restore_album_q">Khôi phục album?</string>
+    <string name="restore_album_msg">“%s” sẽ xuất hiện lại trong thư viện.</string>
+    <string name="restore">Khôi phục</string>
+    <string name="restore_folder_q">Khôi phục thư mục?</string>
+    <string name="restore_folder_msg">Các bài hát từ “%s” sẽ xuất hiện lại trong thư viện.</string>
+    <string name="no_songs">Chưa có bài hát nào.\nChép nhạc vào điện thoại rồi nhấn “Thêm → Làm mới thư viện”.</string>
+    <string name="shuffle">Trộn bài</string>
+    <string name="hide_album">Ẩn album</string>
+    <string name="empty_library">Thư viện trống.</string>
+    <string name="all_songs">Tất cả bài hát</string>
+    <string name="shuffle_all">Trộn tất cả</string>
+    <string name="refresh">Làm mới thư viện</string>
+    <string name="refresh_sub">Đọc lại nhạc trên điện thoại</string>
+    <string name="appearance">Giao diện</string>
+    <string name="theme_light">Sáng — nhấn để chuyển tối</string>
+    <string name="theme_dark">Tối — nhấn để chuyển sáng</string>
+    <string name="hidden_sub">Album và thư mục đã bỏ khỏi thư viện</string>
+    <string name="nothing_hidden">Không có gì bị ẩn.\nĐể ẩn album hoặc thư mục, hãy nhấn giữ nó trong danh sách.</string>
+    <string name="tap_to_restore">Nhấn để khôi phục</string>
+    <string name="cancel">Hủy</string>
+    <plurals name="songs_count">
+        <item quantity="other">%d bài hát</item>
+    </plurals>
+</resources>

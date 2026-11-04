@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">资料库</string>
+    <string name="now_playing">正在\n播放</string>
+    <string name="queue">播放队列 · %s</string>
+    <string name="position">%1$d / %2$d</string>
+    <string name="no_albums">还没有专辑。</string>
+    <string name="done">完成</string>
+    <string name="songs_minutes">%1$s，%2$d 分钟</string>
+    <string name="permission">播放器需要访问手机上的音乐才能显示你的歌曲。</string>
+    <string name="allow">允许</string>
+    <string name="unknown_artist">未知艺人</string>
+    <string name="default_folder">音乐</string>
+    <string name="various_artists">群星</string>
+    <string name="folders">文件夹</string>
+    <string name="artists">艺人</string>
+    <string name="albums">专辑</string>
+    <string name="songs">歌曲</string>
+    <string name="genres">风格</string>
+    <string name="more">更多</string>
+    <string name="hidden">已隐藏</string>
+    <string name="hide_album_q">隐藏专辑？</string>
+    <string name="hide_album_msg">“%s”将从资料库中消失。文件仍保留在手机上，可在“更多 → 已隐藏”中恢复。</string>
+    <string name="hide">隐藏</string>
+    <string name="hide_folder_q">隐藏文件夹？</string>
+    <string name="hide_folder_msg">文件夹“%s”中的所有歌曲将从资料库中消失。文件仍保留在手机上，可在“更多 → 已隐藏”中恢复。</string>
+    <string name="back">返回</string>
+    <string name="restore_album_q">恢复专辑？</string>
+    <string name="restore_album_msg">“%s”将重新出现在资料库中。</string>
+    <string name="restore">恢复</string>
+    <string name="restore_folder_q">恢复文件夹？</string>
+    <string name="restore_folder_msg">“%s”中的歌曲将重新出现在资料库中。</string>
+    <string name="no_songs">还没有歌曲。\n把音乐放到手机上，然后点按“更多 → 刷新资料库”。</string>
+    <string name="shuffle">随机播放</string>
+    <string name="hide_album">隐藏专辑</string>
+    <string name="empty_library">资料库是空的。</string>
+    <string name="all_songs">所有歌曲</string>
+    <string name="shuffle_all">全部随机播放</string>
+    <string name="refresh">刷新资料库</string>
+    <string name="refresh_sub">重新读取手机上的音乐</string>
+    <string name="appearance">外观</string>
+    <string name="theme_light">浅色 — 点按切换为深色</string>
+    <string name="theme_dark">深色 — 点按切换为浅色</string>
+    <string name="hidden_sub">从资料库中移除的专辑和文件夹</string>
+    <string name="nothing_hidden">没有隐藏的内容。\n要隐藏专辑或文件夹，请在列表中长按它。</string>
+    <string name="tap_to_restore">点按以恢复</string>
+    <string name="cancel">取消</string>
+    <plurals name="songs_count">
+        <item quantity="other">%d 首歌曲</item>
+    </plurals>
+</resources>

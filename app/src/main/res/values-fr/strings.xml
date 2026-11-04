@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Bibliothèque</string>
+    <string name="now_playing">En\ncours</string>
+    <string name="queue">File d’attente · %s</string>
+    <string name="position">%1$d sur %2$d</string>
+    <string name="no_albums">Aucun album pour l’instant.</string>
+    <string name="done">OK</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">Le lecteur a besoin d’accéder à la musique de votre téléphone pour afficher vos morceaux.</string>
+    <string name="allow">Autoriser</string>
+    <string name="unknown_artist">Artiste inconnu</string>
+    <string name="default_folder">Musique</string>
+    <string name="various_artists">Artistes divers</string>
+    <string name="folders">Dossiers</string>
+    <string name="artists">Artistes</string>
+    <string name="albums">Albums</string>
+    <string name="songs">Morceaux</string>
+    <string name="genres">Genres</string>
+    <string name="more">Plus</string>
+    <string name="hidden">Masqués</string>
+    <string name="hide_album_q">Masquer l’album ?</string>
+    <string name="hide_album_msg">« %s » disparaîtra de la bibliothèque. Les fichiers restent sur le téléphone ; vous pourrez le rétablir dans « Plus → Masqués ».</string>
+    <string name="hide">Masquer</string>
+    <string name="hide_folder_q">Masquer le dossier ?</string>
+    <string name="hide_folder_msg">Tous les morceaux du dossier « %s » disparaîtront de la bibliothèque. Les fichiers restent sur le téléphone ; vous pourrez les rétablir dans « Plus → Masqués ».</string>
+    <string name="back">Retour</string>
+    <string name="restore_album_q">Rétablir l’album ?</string>
+    <string name="restore_album_msg">« %s » réapparaîtra dans la bibliothèque.</string>
+    <string name="restore">Rétablir</string>
+    <string name="restore_folder_q">Rétablir le dossier ?</string>
+    <string name="restore_folder_msg">Les morceaux de « %s » réapparaîtront dans la bibliothèque.</string>
+    <string name="no_songs">Aucun morceau pour l’instant.\nCopiez de la musique sur le téléphone et touchez « Plus → Actualiser la bibliothèque ».</string>
+    <string name="shuffle">Aléatoire</string>
+    <string name="hide_album">Masquer l’album</string>
+    <string name="empty_library">La bibliothèque est vide.</string>
+    <string name="all_songs">Tous les morceaux</string>
+    <string name="shuffle_all">Tout en aléatoire</string>
+    <string name="refresh">Actualiser la bibliothèque</string>
+    <string name="refresh_sub">Relire la musique du téléphone</string>
+    <string name="appearance">Apparence</string>
+    <string name="theme_light">Clair — touchez pour sombre</string>
+    <string name="theme_dark">Sombre — touchez pour clair</string>
+    <string name="hidden_sub">Albums et dossiers retirés de la bibliothèque</string>
+    <string name="nothing_hidden">Rien n’est masqué.\nPour masquer un album ou un dossier, maintenez le doigt dessus dans la liste.</string>
+    <string name="tap_to_restore">Touchez pour rétablir</string>
+    <string name="cancel">Annuler</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d morceau</item>
+        <item quantity="many">%d morceaux</item>
+        <item quantity="other">%d morceaux</item>
+    </plurals>
+</resources>

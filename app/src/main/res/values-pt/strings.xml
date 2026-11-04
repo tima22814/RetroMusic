@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Biblioteca</string>
+    <string name="now_playing">Tocando\nagora</string>
+    <string name="queue">Fila · %s</string>
+    <string name="position">%1$d de %2$d</string>
+    <string name="no_albums">Ainda não há álbuns.</string>
+    <string name="done">OK</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">O player precisa de acesso às músicas do celular para mostrar suas faixas.</string>
+    <string name="allow">Permitir</string>
+    <string name="unknown_artist">Artista desconhecido</string>
+    <string name="default_folder">Música</string>
+    <string name="various_artists">Vários artistas</string>
+    <string name="folders">Pastas</string>
+    <string name="artists">Artistas</string>
+    <string name="albums">Álbuns</string>
+    <string name="songs">Músicas</string>
+    <string name="genres">Gêneros</string>
+    <string name="more">Mais</string>
+    <string name="hidden">Ocultos</string>
+    <string name="hide_album_q">Ocultar álbum?</string>
+    <string name="hide_album_msg">“%s” vai sumir da biblioteca. Os arquivos continuam no celular; você pode recuperá-lo em “Mais → Ocultos”.</string>
+    <string name="hide">Ocultar</string>
+    <string name="hide_folder_q">Ocultar pasta?</string>
+    <string name="hide_folder_msg">Todas as músicas da pasta “%s” vão sumir da biblioteca. Os arquivos continuam no celular; você pode recuperá-las em “Mais → Ocultos”.</string>
+    <string name="back">Voltar</string>
+    <string name="restore_album_q">Recuperar álbum?</string>
+    <string name="restore_album_msg">“%s” vai aparecer de novo na biblioteca.</string>
+    <string name="restore">Recuperar</string>
+    <string name="restore_folder_q">Recuperar pasta?</string>
+    <string name="restore_folder_msg">As músicas de “%s” vão aparecer de novo na biblioteca.</string>
+    <string name="no_songs">Ainda não há músicas.\nCopie músicas para o celular e toque em “Mais → Atualizar biblioteca”.</string>
+    <string name="shuffle">Aleatório</string>
+    <string name="hide_album">Ocultar álbum</string>
+    <string name="empty_library">A biblioteca está vazia.</string>
+    <string name="all_songs">Todas as músicas</string>
+    <string name="shuffle_all">Tudo aleatório</string>
+    <string name="refresh">Atualizar biblioteca</string>
+    <string name="refresh_sub">Reler as músicas do celular</string>
+    <string name="appearance">Aparência</string>
+    <string name="theme_light">Claro — toque para escuro</string>
+    <string name="theme_dark">Escuro — toque para claro</string>
+    <string name="hidden_sub">Álbuns e pastas tirados da biblioteca</string>
+    <string name="nothing_hidden">Nada está oculto.\nPara ocultar um álbum ou uma pasta, mantenha o dedo sobre ele na lista.</string>
+    <string name="tap_to_restore">Toque para recuperar</string>
+    <string name="cancel">Cancelar</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d música</item>
+        <item quantity="many">%d músicas</item>
+        <item quantity="other">%d músicas</item>
+    </plurals>
+</resources>

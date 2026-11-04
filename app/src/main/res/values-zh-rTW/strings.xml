@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">資料庫</string>
+    <string name="now_playing">正在\n播放</string>
+    <string name="queue">播放佇列 · %s</string>
+    <string name="position">%1$d / %2$d</string>
+    <string name="no_albums">還沒有專輯。</string>
+    <string name="done">完成</string>
+    <string name="songs_minutes">%1$s，%2$d 分鐘</string>
+    <string name="permission">播放器需要存取手機上的音樂才能顯示你的歌曲。</string>
+    <string name="allow">允許</string>
+    <string name="unknown_artist">未知演出者</string>
+    <string name="default_folder">音樂</string>
+    <string name="various_artists">群星</string>
+    <string name="folders">資料夾</string>
+    <string name="artists">演出者</string>
+    <string name="albums">專輯</string>
+    <string name="songs">歌曲</string>
+    <string name="genres">類型</string>
+    <string name="more">更多</string>
+    <string name="hidden">已隱藏</string>
+    <string name="hide_album_q">隱藏專輯？</string>
+    <string name="hide_album_msg">「%s」將從資料庫中消失。檔案仍保留在手機上，可在「更多 → 已隱藏」中復原。</string>
+    <string name="hide">隱藏</string>
+    <string name="hide_folder_q">隱藏資料夾？</string>
+    <string name="hide_folder_msg">資料夾「%s」中的所有歌曲將從資料庫中消失。檔案仍保留在手機上，可在「更多 → 已隱藏」中復原。</string>
+    <string name="back">返回</string>
+    <string name="restore_album_q">復原專輯？</string>
+    <string name="restore_album_msg">「%s」將重新出現在資料庫中。</string>
+    <string name="restore">復原</string>
+    <string name="restore_folder_q">復原資料夾？</string>
+    <string name="restore_folder_msg">「%s」中的歌曲將重新出現在資料庫中。</string>
+    <string name="no_songs">還沒有歌曲。\n把音樂放到手機上，然後點選「更多 → 重新整理資料庫」。</string>
+    <string name="shuffle">隨機播放</string>
+    <string name="hide_album">隱藏專輯</string>
+    <string name="empty_library">資料庫是空的。</string>
+    <string name="all_songs">所有歌曲</string>
+    <string name="shuffle_all">全部隨機播放</string>
+    <string name="refresh">重新整理資料庫</string>
+    <string name="refresh_sub">重新讀取手機上的音樂</string>
+    <string name="appearance">外觀</string>
+    <string name="theme_light">淺色 — 點選切換為深色</string>
+    <string name="theme_dark">深色 — 點選切換為淺色</string>
+    <string name="hidden_sub">從資料庫中移除的專輯和資料夾</string>
+    <string name="nothing_hidden">沒有隱藏的項目。\n要隱藏專輯或資料夾，請在清單中長按它。</string>
+    <string name="tap_to_restore">點選以復原</string>
+    <string name="cancel">取消</string>
+    <plurals name="songs_count">
+        <item quantity="other">%d 首歌曲</item>
+    </plurals>
+</resources>

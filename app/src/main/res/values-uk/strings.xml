@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Медіатека</string>
+    <string name="now_playing">Зараз\nграє</string>
+    <string name="queue">Черга · %s</string>
+    <string name="position">%1$d з %2$d</string>
+    <string name="no_albums">Альбомів поки немає.</string>
+    <string name="done">Готово</string>
+    <string name="songs_minutes">%1$s, %2$d хв</string>
+    <string name="permission">Плеєру потрібен доступ до музики на телефоні, щоб показати твої пісні.</string>
+    <string name="allow">Дозволити</string>
+    <string name="unknown_artist">Невідомий виконавець</string>
+    <string name="default_folder">Музика</string>
+    <string name="various_artists">Різні виконавці</string>
+    <string name="folders">Теки</string>
+    <string name="artists">Виконавці</string>
+    <string name="albums">Альбоми</string>
+    <string name="songs">Пісні</string>
+    <string name="genres">Жанри</string>
+    <string name="more">Ще</string>
+    <string name="hidden">Приховані</string>
+    <string name="hide_album_q">Приховати альбом?</string>
+    <string name="hide_album_msg">«%s» зникне з медіатеки. Файли залишаться на телефоні, повернути можна в «Ще → Приховані».</string>
+    <string name="hide">Приховати</string>
+    <string name="hide_folder_q">Приховати теку?</string>
+    <string name="hide_folder_msg">Усі пісні з теки «%s» зникнуть з медіатеки. Файли залишаться на телефоні, повернути можна в «Ще → Приховані».</string>
+    <string name="back">Назад</string>
+    <string name="restore_album_q">Повернути альбом?</string>
+    <string name="restore_album_msg">«%s» знову з’явиться в медіатеці.</string>
+    <string name="restore">Повернути</string>
+    <string name="restore_folder_q">Повернути теку?</string>
+    <string name="restore_folder_msg">Пісні з «%s» знову з’являться в медіатеці.</string>
+    <string name="no_songs">Пісень поки немає.\nЗакинь музику на телефон і натисни «Ще → Оновити медіатеку».</string>
+    <string name="shuffle">Перемішати</string>
+    <string name="hide_album">Приховати альбом</string>
+    <string name="empty_library">Медіатека порожня.</string>
+    <string name="all_songs">Усі пісні</string>
+    <string name="shuffle_all">Перемішати все</string>
+    <string name="refresh">Оновити медіатеку</string>
+    <string name="refresh_sub">Перечитати музику на телефоні</string>
+    <string name="appearance">Оформлення</string>
+    <string name="theme_light">Світле — натисни для темного</string>
+    <string name="theme_dark">Темне — натисни для світлого</string>
+    <string name="hidden_sub">Альбоми й теки, прибрані з медіатеки</string>
+    <string name="nothing_hidden">Нічого не приховано.\nЩоб приховати альбом або теку, утримуй на ній палець у списку.</string>
+    <string name="tap_to_restore">Натисни, щоб повернути</string>
+    <string name="cancel">Скасувати</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d пісня</item>
+        <item quantity="few">%d пісні</item>
+        <item quantity="many">%d пісень</item>
+        <item quantity="other">%d пісні</item>
+    </plurals>
+</resources>

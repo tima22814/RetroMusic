@@ -56,6 +56,10 @@ android {
     buildFeatures {
         compose = true
     }
+    androidResources {
+        // Lists the app in the phone's per-app language settings (Android 13+).
+        generateLocaleConfig = true
+    }
 }
 
 dependencies {

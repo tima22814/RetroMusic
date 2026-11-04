@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Bibliotek</string>
+    <string name="now_playing">Spelas\nnu</string>
+    <string name="queue">Kö · %s</string>
+    <string name="position">%1$d av %2$d</string>
+    <string name="no_albums">Inga album än.</string>
+    <string name="done">Klar</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">Spelaren behöver åtkomst till musiken på telefonen för att visa dina låtar.</string>
+    <string name="allow">Tillåt</string>
+    <string name="unknown_artist">Okänd artist</string>
+    <string name="default_folder">Musik</string>
+    <string name="various_artists">Olika artister</string>
+    <string name="folders">Mappar</string>
+    <string name="artists">Artister</string>
+    <string name="albums">Album</string>
+    <string name="songs">Låtar</string>
+    <string name="genres">Genrer</string>
+    <string name="more">Mer</string>
+    <string name="hidden">Dolda</string>
+    <string name="hide_album_q">Dölja albumet?</string>
+    <string name="hide_album_msg">”%s” försvinner från biblioteket. Filerna ligger kvar på telefonen; du kan ta tillbaka det under ”Mer → Dolda”.</string>
+    <string name="hide">Dölj</string>
+    <string name="hide_folder_q">Dölja mappen?</string>
+    <string name="hide_folder_msg">Alla låtar i mappen ”%s” försvinner från biblioteket. Filerna ligger kvar på telefonen; du kan ta tillbaka dem under ”Mer → Dolda”.</string>
+    <string name="back">Tillbaka</string>
+    <string name="restore_album_q">Ta tillbaka albumet?</string>
+    <string name="restore_album_msg">”%s” visas i biblioteket igen.</string>
+    <string name="restore">Ta tillbaka</string>
+    <string name="restore_folder_q">Ta tillbaka mappen?</string>
+    <string name="restore_folder_msg">Låtar från ”%s” visas i biblioteket igen.</string>
+    <string name="no_songs">Inga låtar än.\nLägg musik på telefonen och tryck på ”Mer → Uppdatera biblioteket”.</string>
+    <string name="shuffle">Blanda</string>
+    <string name="hide_album">Dölj album</string>
+    <string name="empty_library">Biblioteket är tomt.</string>
+    <string name="all_songs">Alla låtar</string>
+    <string name="shuffle_all">Blanda alla</string>
+    <string name="refresh">Uppdatera biblioteket</string>
+    <string name="refresh_sub">Läs in musiken på telefonen igen</string>
+    <string name="appearance">Utseende</string>
+    <string name="theme_light">Ljust — tryck för mörkt</string>
+    <string name="theme_dark">Mörkt — tryck för ljust</string>
+    <string name="hidden_sub">Album och mappar som tagits ur biblioteket</string>
+    <string name="nothing_hidden">Inget är dolt.\nHåll fingret på ett album eller en mapp i listan för att dölja det.</string>
+    <string name="tap_to_restore">Tryck för att ta tillbaka</string>
+    <string name="cancel">Avbryt</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d låt</item>
+        <item quantity="other">%d låtar</item>
+    </plurals>
+</resources>

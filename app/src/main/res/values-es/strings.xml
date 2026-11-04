@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Biblioteca</string>
+    <string name="now_playing">Ahora\nsuena</string>
+    <string name="queue">Cola · %s</string>
+    <string name="position">%1$d de %2$d</string>
+    <string name="no_albums">Aún no hay álbumes.</string>
+    <string name="done">OK</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">El reproductor necesita acceso a la música del teléfono para mostrar tus canciones.</string>
+    <string name="allow">Permitir</string>
+    <string name="unknown_artist">Artista desconocido</string>
+    <string name="default_folder">Música</string>
+    <string name="various_artists">Varios artistas</string>
+    <string name="folders">Carpetas</string>
+    <string name="artists">Artistas</string>
+    <string name="albums">Álbumes</string>
+    <string name="songs">Canciones</string>
+    <string name="genres">Géneros</string>
+    <string name="more">Más</string>
+    <string name="hidden">Ocultos</string>
+    <string name="hide_album_q">¿Ocultar álbum?</string>
+    <string name="hide_album_msg">«%s» desaparecerá de la biblioteca. Los archivos se quedan en el teléfono; puedes recuperarlo en «Más → Ocultos».</string>
+    <string name="hide">Ocultar</string>
+    <string name="hide_folder_q">¿Ocultar carpeta?</string>
+    <string name="hide_folder_msg">Todas las canciones de la carpeta «%s» desaparecerán de la biblioteca. Los archivos se quedan en el teléfono; puedes recuperarlas en «Más → Ocultos».</string>
+    <string name="back">Atrás</string>
+    <string name="restore_album_q">¿Recuperar álbum?</string>
+    <string name="restore_album_msg">«%s» volverá a aparecer en la biblioteca.</string>
+    <string name="restore">Recuperar</string>
+    <string name="restore_folder_q">¿Recuperar carpeta?</string>
+    <string name="restore_folder_msg">Las canciones de «%s» volverán a aparecer en la biblioteca.</string>
+    <string name="no_songs">Aún no hay canciones.\nCopia música al teléfono y toca «Más → Actualizar biblioteca».</string>
+    <string name="shuffle">Aleatorio</string>
+    <string name="hide_album">Ocultar álbum</string>
+    <string name="empty_library">La biblioteca está vacía.</string>
+    <string name="all_songs">Todas las canciones</string>
+    <string name="shuffle_all">Todo aleatorio</string>
+    <string name="refresh">Actualizar biblioteca</string>
+    <string name="refresh_sub">Volver a leer la música del teléfono</string>
+    <string name="appearance">Apariencia</string>
+    <string name="theme_light">Claro — toca para oscuro</string>
+    <string name="theme_dark">Oscuro — toca para claro</string>
+    <string name="hidden_sub">Álbumes y carpetas quitados de la biblioteca</string>
+    <string name="nothing_hidden">No hay nada oculto.\nPara ocultar un álbum o una carpeta, mantén el dedo sobre él en la lista.</string>
+    <string name="tap_to_restore">Toca para recuperar</string>
+    <string name="cancel">Cancelar</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d canción</item>
+        <item quantity="many">%d canciones</item>
+        <item quantity="other">%d canciones</item>
+    </plurals>
+</resources>

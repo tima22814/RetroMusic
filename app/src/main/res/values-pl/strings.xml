@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Biblioteka</string>
+    <string name="now_playing">Teraz\ngra</string>
+    <string name="queue">Kolejka · %s</string>
+    <string name="position">%1$d z %2$d</string>
+    <string name="no_albums">Nie ma jeszcze albumów.</string>
+    <string name="done">Gotowe</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">Odtwarzacz potrzebuje dostępu do muzyki w telefonie, żeby pokazać twoje utwory.</string>
+    <string name="allow">Zezwól</string>
+    <string name="unknown_artist">Nieznany wykonawca</string>
+    <string name="default_folder">Muzyka</string>
+    <string name="various_artists">Różni wykonawcy</string>
+    <string name="folders">Foldery</string>
+    <string name="artists">Wykonawcy</string>
+    <string name="albums">Albumy</string>
+    <string name="songs">Utwory</string>
+    <string name="genres">Gatunki</string>
+    <string name="more">Więcej</string>
+    <string name="hidden">Ukryte</string>
+    <string name="hide_album_q">Ukryć album?</string>
+    <string name="hide_album_msg">„%s” zniknie z biblioteki. Pliki zostaną w telefonie, przywrócić go można w „Więcej → Ukryte”.</string>
+    <string name="hide">Ukryj</string>
+    <string name="hide_folder_q">Ukryć folder?</string>
+    <string name="hide_folder_msg">Wszystkie utwory z folderu „%s” znikną z biblioteki. Pliki zostaną w telefonie, przywrócić je można w „Więcej → Ukryte”.</string>
+    <string name="back">Wstecz</string>
+    <string name="restore_album_q">Przywrócić album?</string>
+    <string name="restore_album_msg">„%s” znów pojawi się w bibliotece.</string>
+    <string name="restore">Przywróć</string>
+    <string name="restore_folder_q">Przywrócić folder?</string>
+    <string name="restore_folder_msg">Utwory z „%s” znów pojawią się w bibliotece.</string>
+    <string name="no_songs">Nie ma jeszcze utworów.\nWrzuć muzykę na telefon i stuknij „Więcej → Odśwież bibliotekę”.</string>
+    <string name="shuffle">Losowo</string>
+    <string name="hide_album">Ukryj album</string>
+    <string name="empty_library">Biblioteka jest pusta.</string>
+    <string name="all_songs">Wszystkie utwory</string>
+    <string name="shuffle_all">Wszystko losowo</string>
+    <string name="refresh">Odśwież bibliotekę</string>
+    <string name="refresh_sub">Ponownie wczytaj muzykę z telefonu</string>
+    <string name="appearance">Wygląd</string>
+    <string name="theme_light">Jasny — stuknij, by włączyć ciemny</string>
+    <string name="theme_dark">Ciemny — stuknij, by włączyć jasny</string>
+    <string name="hidden_sub">Albumy i foldery zabrane z biblioteki</string>
+    <string name="nothing_hidden">Nic nie jest ukryte.\nAby ukryć album lub folder, przytrzymaj go palcem na liście.</string>
+    <string name="tap_to_restore">Stuknij, aby przywrócić</string>
+    <string name="cancel">Anuluj</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d utwór</item>
+        <item quantity="few">%d utwory</item>
+        <item quantity="many">%d utworów</item>
+        <item quantity="other">%d utworu</item>
+    </plurals>
+</resources>

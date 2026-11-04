@@ -60,6 +60,8 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.onSizeChanged
+import androidx.compose.ui.res.stringResource
+import io.github.tima22814.retromusic.R
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -298,7 +300,7 @@ fun BackButton(label: String, onClick: () -> Unit) =
 
 @Composable
 fun NowPlayingButton(onClick: () -> Unit) =
-    GlossButton("Сейчас\nиграет", onClick, arrowShape(false), padStart = 8.dp, padEnd = 15.dp, fontSize = 10)
+    GlossButton(stringResource(R.string.now_playing), onClick, arrowShape(false), padStart = 8.dp, padEnd = 15.dp, fontSize = 10)
 
 @Composable
 fun NavBar(
@@ -539,7 +541,7 @@ fun ConfirmDialog(
                 modifier = Modifier.padding(top = 6.dp, bottom = 14.dp),
             )
             Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                Box(Modifier.weight(1f)) { WideButton("Отмена", onDismiss) }
+                Box(Modifier.weight(1f)) { WideButton(stringResource(R.string.cancel), onDismiss) }
                 Box(Modifier.weight(1f)) { WideButton(confirm) { onConfirm(); onDismiss() } }
             }
         }

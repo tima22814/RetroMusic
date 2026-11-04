@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">ライブラリ</string>
+    <string name="now_playing">再生中</string>
+    <string name="queue">再生キュー · %s</string>
+    <string name="position">%1$d / %2$d</string>
+    <string name="no_albums">アルバムはまだありません。</string>
+    <string name="done">完了</string>
+    <string name="songs_minutes">%1$s、%2$d分</string>
+    <string name="permission">曲を表示するには、端末内の音楽へのアクセスが必要です。</string>
+    <string name="allow">許可</string>
+    <string name="unknown_artist">不明なアーティスト</string>
+    <string name="default_folder">ミュージック</string>
+    <string name="various_artists">複数のアーティスト</string>
+    <string name="folders">フォルダ</string>
+    <string name="artists">アーティスト</string>
+    <string name="albums">アルバム</string>
+    <string name="songs">曲</string>
+    <string name="genres">ジャンル</string>
+    <string name="more">その他</string>
+    <string name="hidden">非表示</string>
+    <string name="hide_album_q">アルバムを非表示にしますか？</string>
+    <string name="hide_album_msg">「%s」はライブラリから消えます。ファイルは端末に残り、「その他 → 非表示」から戻せます。</string>
+    <string name="hide">非表示にする</string>
+    <string name="hide_folder_q">フォルダを非表示にしますか？</string>
+    <string name="hide_folder_msg">フォルダ「%s」の曲はすべてライブラリから消えます。ファイルは端末に残り、「その他 → 非表示」から戻せます。</string>
+    <string name="back">戻る</string>
+    <string name="restore_album_q">アルバムを戻しますか？</string>
+    <string name="restore_album_msg">「%s」が再びライブラリに表示されます。</string>
+    <string name="restore">戻す</string>
+    <string name="restore_folder_q">フォルダを戻しますか？</string>
+    <string name="restore_folder_msg">「%s」の曲が再びライブラリに表示されます。</string>
+    <string name="no_songs">曲はまだありません。\n端末に音楽を入れて「その他 → ライブラリを更新」をタップしてください。</string>
+    <string name="shuffle">シャッフル</string>
+    <string name="hide_album">アルバムを非表示</string>
+    <string name="empty_library">ライブラリは空です。</string>
+    <string name="all_songs">すべての曲</string>
+    <string name="shuffle_all">すべてシャッフル</string>
+    <string name="refresh">ライブラリを更新</string>
+    <string name="refresh_sub">端末の音楽を読み込み直す</string>
+    <string name="appearance">外観</string>
+    <string name="theme_light">ライト — タップでダーク</string>
+    <string name="theme_dark">ダーク — タップでライト</string>
+    <string name="hidden_sub">ライブラリから外したアルバムとフォルダ</string>
+    <string name="nothing_hidden">非表示の項目はありません。\nアルバムやフォルダを非表示にするには、リストで長押ししてください。</string>
+    <string name="tap_to_restore">タップして戻す</string>
+    <string name="cancel">キャンセル</string>
+    <plurals name="songs_count">
+        <item quantity="other">%d曲</item>
+    </plurals>
+</resources>

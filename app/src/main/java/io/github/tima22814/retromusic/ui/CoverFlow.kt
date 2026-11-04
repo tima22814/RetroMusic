@@ -56,6 +56,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -63,6 +64,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
+import io.github.tima22814.retromusic.R
 import io.github.tima22814.retromusic.Library
 import io.github.tima22814.retromusic.PlaybackState
 import io.github.tima22814.retromusic.PlayerViewModel
@@ -94,7 +96,7 @@ private fun CoverFlowContent(
     onClose: (() -> Unit)?,
 ) {
     val albums = remember(tracks) { Library.albums(tracks) }
-    if (albums.isEmpty()) return EmptyText("Альбомов пока нет.")
+    if (albums.isEmpty()) return EmptyText(stringResource(R.string.no_albums))
     val n = albums.size
     // pos runs unbounded; albums repeat around it in a loop.
     val start = remember(albums) { albums.indexOfFirst { it.name == state.current?.album }.coerceAtLeast(0) }
@@ -276,7 +278,7 @@ private fun CoverFlowContent(
                         Text(a.name, color = C.Fg, fontSize = 15.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis, textAlign = TextAlign.Center)
                         Text(a.artist, color = C.Muted, fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
                         val minutes = a.songs.sumOf { it.durationMs } / 60000
-                        Text("${songsWord(a.songs.size)}, $minutes мин.", color = C.Dim, fontSize = 11.sp, maxLines = 1)
+                        Text(stringResource(R.string.songs_minutes, songsWord(a.songs.size), minutes), color = C.Dim, fontSize = 11.sp, maxLines = 1)
                     }
                     RoundButton(Modifier.align(Alignment.CenterEnd), { vm.playList(a.songs, a.songs.indices.random(), shuffle = true) }) {
                         Ico(Icons.Shuffle, 16.dp, C.Fg)
@@ -336,7 +338,7 @@ private fun CoverFlowContent(
         }
         if (onClose != null && flipped < 0) {
             Box(Modifier.align(Alignment.TopStart).padding(start = 10.dp, top = 10.dp).zIndex(300f)) {
-                BackButton("Медиатека", onClose)
+                BackButton(stringResource(R.string.library), onClose)
             }
         }
     }
@@ -373,12 +375,12 @@ private fun AlbumPanel(vm: PlayerViewModel, album: io.github.tima22814.retromusi
                 .background(Brush.verticalGradient(listOf(Color(0x33FFFFFF), Color(0x08FFFFFF))))
                 .drawBehind { drawLine(Color.Black, Offset(0f, size.height - 0.5f), Offset(size.width, size.height - 0.5f), 1f) },
         ) {
-            Box(Modifier.align(Alignment.CenterStart).padding(start = 10.dp)) { GlossButton("Готово", onDone) }
+            Box(Modifier.align(Alignment.CenterStart).padding(start = 10.dp)) { GlossButton(stringResource(R.string.done), onDone) }
             Column(Modifier.align(Alignment.Center).fillMaxWidth(0.6f), horizontalAlignment = Alignment.CenterHorizontally) {
                 Text(album.name, color = C.Fg, fontSize = 17.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 Text(album.artist, color = C.Muted, fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 val minutes = album.songs.sumOf { it.durationMs } / 60000
-                Text("${songsWord(album.songs.size)}, $minutes мин.", color = C.Dim, fontSize = 11.sp, maxLines = 1)
+                Text(stringResource(R.string.songs_minutes, songsWord(album.songs.size), minutes), color = C.Dim, fontSize = 11.sp, maxLines = 1)
             }
             Box(Modifier.align(Alignment.CenterEnd).padding(end = 10.dp)) {
                 GlossButton("", { vm.playList(album.songs, album.songs.indices.random(), shuffle = true) }, padStart = 0.dp, padEnd = 0.dp) {

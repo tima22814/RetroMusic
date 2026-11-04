@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Libreria</string>
+    <string name="now_playing">In\nascolto</string>
+    <string name="queue">Coda · %s</string>
+    <string name="position">%1$d di %2$d</string>
+    <string name="no_albums">Ancora nessun album.</string>
+    <string name="done">Fine</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">Il lettore ha bisogno di accedere alla musica sul telefono per mostrare i tuoi brani.</string>
+    <string name="allow">Consenti</string>
+    <string name="unknown_artist">Artista sconosciuto</string>
+    <string name="default_folder">Musica</string>
+    <string name="various_artists">Artisti vari</string>
+    <string name="folders">Cartelle</string>
+    <string name="artists">Artisti</string>
+    <string name="albums">Album</string>
+    <string name="songs">Brani</string>
+    <string name="genres">Generi</string>
+    <string name="more">Altro</string>
+    <string name="hidden">Nascosti</string>
+    <string name="hide_album_q">Nascondere l’album?</string>
+    <string name="hide_album_msg">«%s» sparirà dalla libreria. I file restano sul telefono; puoi ripristinarlo in «Altro → Nascosti».</string>
+    <string name="hide">Nascondi</string>
+    <string name="hide_folder_q">Nascondere la cartella?</string>
+    <string name="hide_folder_msg">Tutti i brani della cartella «%s» spariranno dalla libreria. I file restano sul telefono; puoi ripristinarli in «Altro → Nascosti».</string>
+    <string name="back">Indietro</string>
+    <string name="restore_album_q">Ripristinare l’album?</string>
+    <string name="restore_album_msg">«%s» tornerà nella libreria.</string>
+    <string name="restore">Ripristina</string>
+    <string name="restore_folder_q">Ripristinare la cartella?</string>
+    <string name="restore_folder_msg">I brani di «%s» torneranno nella libreria.</string>
+    <string name="no_songs">Ancora nessun brano.\nCopia della musica sul telefono e tocca «Altro → Aggiorna libreria».</string>
+    <string name="shuffle">Casuale</string>
+    <string name="hide_album">Nascondi album</string>
+    <string name="empty_library">La libreria è vuota.</string>
+    <string name="all_songs">Tutti i brani</string>
+    <string name="shuffle_all">Tutto in casuale</string>
+    <string name="refresh">Aggiorna libreria</string>
+    <string name="refresh_sub">Rileggi la musica sul telefono</string>
+    <string name="appearance">Aspetto</string>
+    <string name="theme_light">Chiaro — tocca per scuro</string>
+    <string name="theme_dark">Scuro — tocca per chiaro</string>
+    <string name="hidden_sub">Album e cartelle tolti dalla libreria</string>
+    <string name="nothing_hidden">Niente è nascosto.\nPer nascondere un album o una cartella, tienilo premuto nella lista.</string>
+    <string name="tap_to_restore">Tocca per ripristinare</string>
+    <string name="cancel">Annulla</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d brano</item>
+        <item quantity="many">%d brani</item>
+        <item quantity="other">%d brani</item>
+    </plurals>
+</resources>

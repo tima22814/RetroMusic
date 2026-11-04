@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Knihovna</string>
+    <string name="now_playing">Právě\nhraje</string>
+    <string name="queue">Fronta · %s</string>
+    <string name="position">%1$d z %2$d</string>
+    <string name="no_albums">Zatím žádná alba.</string>
+    <string name="done">Hotovo</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">Přehrávač potřebuje přístup k hudbě v telefonu, aby mohl zobrazit tvé skladby.</string>
+    <string name="allow">Povolit</string>
+    <string name="unknown_artist">Neznámý interpret</string>
+    <string name="default_folder">Hudba</string>
+    <string name="various_artists">Různí interpreti</string>
+    <string name="folders">Složky</string>
+    <string name="artists">Interpreti</string>
+    <string name="albums">Alba</string>
+    <string name="songs">Skladby</string>
+    <string name="genres">Žánry</string>
+    <string name="more">Další</string>
+    <string name="hidden">Skryté</string>
+    <string name="hide_album_q">Skrýt album?</string>
+    <string name="hide_album_msg">„%s“ zmizí z knihovny. Soubory zůstanou v telefonu, vrátit ho můžeš v „Další → Skryté“.</string>
+    <string name="hide">Skrýt</string>
+    <string name="hide_folder_q">Skrýt složku?</string>
+    <string name="hide_folder_msg">Všechny skladby ze složky „%s“ zmizí z knihovny. Soubory zůstanou v telefonu, vrátit je můžeš v „Další → Skryté“.</string>
+    <string name="back">Zpět</string>
+    <string name="restore_album_q">Vrátit album?</string>
+    <string name="restore_album_msg">„%s“ se znovu objeví v knihovně.</string>
+    <string name="restore">Vrátit</string>
+    <string name="restore_folder_q">Vrátit složku?</string>
+    <string name="restore_folder_msg">Skladby z „%s“ se znovu objeví v knihovně.</string>
+    <string name="no_songs">Zatím žádné skladby.\nNahraj hudbu do telefonu a klepni na „Další → Obnovit knihovnu“.</string>
+    <string name="shuffle">Náhodně</string>
+    <string name="hide_album">Skrýt album</string>
+    <string name="empty_library">Knihovna je prázdná.</string>
+    <string name="all_songs">Všechny skladby</string>
+    <string name="shuffle_all">Vše náhodně</string>
+    <string name="refresh">Obnovit knihovnu</string>
+    <string name="refresh_sub">Znovu načíst hudbu v telefonu</string>
+    <string name="appearance">Vzhled</string>
+    <string name="theme_light">Světlý — klepni pro tmavý</string>
+    <string name="theme_dark">Tmavý — klepni pro světlý</string>
+    <string name="hidden_sub">Alba a složky odebrané z knihovny</string>
+    <string name="nothing_hidden">Nic není skryté.\nAlbum nebo složku skryješ tak, že na ni v seznamu podržíš prst.</string>
+    <string name="tap_to_restore">Klepni pro vrácení</string>
+    <string name="cancel">Zrušit</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d skladba</item>
+        <item quantity="few">%d skladby</item>
+        <item quantity="many">%d skladby</item>
+        <item quantity="other">%d skladeb</item>
+    </plurals>
+</resources>

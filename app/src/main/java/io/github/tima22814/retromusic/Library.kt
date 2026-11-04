@@ -28,10 +28,15 @@ data class Album(val name: String, val artist: String, val songs: List<Track>)
 
 private val leadingNumber = Regex("""^\s*(\d{1,3})[.)_\s-]+\s*(?=\D)""")
 private val artistTitle = Regex("""^\s*(.+?)\s+[-–—]\s+(.+?)\s*$""")
-private const val UNKNOWN_ARTIST = "Неизвестный исполнитель"
-
 object Library {
+    // Placeholder names, re-read on every load so they follow the phone's language.
+    private var unknownArtist = "Unknown artist"
+    private var variousArtists = "Various artists"
+
     fun load(context: Context): List<Track> {
+        unknownArtist = context.getString(R.string.unknown_artist)
+        variousArtists = context.getString(R.string.various_artists)
+        val defaultFolder = context.getString(R.string.default_folder)
         val collection = if (Build.VERSION.SDK_INT >= 29) {
             MediaStore.Audio.Media.getContentUri(MediaStore.VOLUME_EXTERNAL)
         } else {
@@ -66,7 +71,7 @@ object Library {
             while (c.moveToNext()) {
                 val id = c.getLong(iId)
                 val path = c.getString(iData).orEmpty()
-                val folder = File(path).parentFile?.name ?: "Музыка"
+                val folder = File(path).parentFile?.name ?: defaultFolder
                 var stem = c.getString(iName).orEmpty().substringBeforeLast('.')
                 var trackNo = c.getInt(iTrack) % 1000
 
@@ -77,7 +82,7 @@ object Library {
                 }
                 val tagArtist = c.getString(iArtist).orEmpty().takeUnless { it.isBlank() || it == "<unknown>" }
                 val (artist, title) = artistTitle.matchEntire(stem)?.let { it.groupValues[1] to it.groupValues[2] }
-                    ?: ((tagArtist ?: UNKNOWN_ARTIST) to (c.getString(iTitle).orEmpty().ifBlank { stem }))
+                    ?: ((tagArtist ?: unknownArtist) to (c.getString(iTitle).orEmpty().ifBlank { stem }))
 
                 out += Track(
                     id = id,
@@ -102,7 +107,7 @@ object Library {
 
     fun artistLabel(songs: List<Track>): String {
         val artists = songs.map { it.artist }.distinct()
-        return if (artists.size > 2) "Разные исполнители" else artists.joinToString(", ")
+        return if (artists.size > 2) variousArtists else artists.joinToString(", ")
     }
 
     val collator: java.text.Collator = java.text.Collator.getInstance(java.util.Locale("ru")).apply {

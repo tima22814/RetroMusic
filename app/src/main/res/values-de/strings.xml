@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Mediathek</string>
+    <string name="now_playing">Läuft\ngerade</string>
+    <string name="queue">Warteschlange · %s</string>
+    <string name="position">%1$d von %2$d</string>
+    <string name="no_albums">Noch keine Alben.</string>
+    <string name="done">Fertig</string>
+    <string name="songs_minutes">%1$s, %2$d Min.</string>
+    <string name="permission">Der Player braucht Zugriff auf die Musik auf deinem Handy, um deine Titel anzuzeigen.</string>
+    <string name="allow">Erlauben</string>
+    <string name="unknown_artist">Unbekannter Interpret</string>
+    <string name="default_folder">Musik</string>
+    <string name="various_artists">Verschiedene Interpreten</string>
+    <string name="folders">Ordner</string>
+    <string name="artists">Interpreten</string>
+    <string name="albums">Alben</string>
+    <string name="songs">Titel</string>
+    <string name="genres">Genres</string>
+    <string name="more">Mehr</string>
+    <string name="hidden">Ausgeblendet</string>
+    <string name="hide_album_q">Album ausblenden?</string>
+    <string name="hide_album_msg">„%s“ verschwindet aus der Mediathek. Die Dateien bleiben auf dem Handy, zurückholen kannst du es unter „Mehr → Ausgeblendet“.</string>
+    <string name="hide">Ausblenden</string>
+    <string name="hide_folder_q">Ordner ausblenden?</string>
+    <string name="hide_folder_msg">Alle Titel aus dem Ordner „%s“ verschwinden aus der Mediathek. Die Dateien bleiben auf dem Handy, zurückholen kannst du sie unter „Mehr → Ausgeblendet“.</string>
+    <string name="back">Zurück</string>
+    <string name="restore_album_q">Album zurückholen?</string>
+    <string name="restore_album_msg">„%s“ erscheint wieder in der Mediathek.</string>
+    <string name="restore">Zurückholen</string>
+    <string name="restore_folder_q">Ordner zurückholen?</string>
+    <string name="restore_folder_msg">Titel aus „%s“ erscheinen wieder in der Mediathek.</string>
+    <string name="no_songs">Noch keine Titel.\nKopiere Musik aufs Handy und tippe auf „Mehr → Mediathek aktualisieren“.</string>
+    <string name="shuffle">Zufällig</string>
+    <string name="hide_album">Album ausblenden</string>
+    <string name="empty_library">Die Mediathek ist leer.</string>
+    <string name="all_songs">Alle Titel</string>
+    <string name="shuffle_all">Alle zufällig</string>
+    <string name="refresh">Mediathek aktualisieren</string>
+    <string name="refresh_sub">Musik auf dem Handy neu einlesen</string>
+    <string name="appearance">Darstellung</string>
+    <string name="theme_light">Hell — tippen für dunkel</string>
+    <string name="theme_dark">Dunkel — tippen für hell</string>
+    <string name="hidden_sub">Aus der Mediathek genommene Alben und Ordner</string>
+    <string name="nothing_hidden">Nichts ausgeblendet.\nUm ein Album oder einen Ordner auszublenden, halte in der Liste den Finger darauf.</string>
+    <string name="tap_to_restore">Tippen zum Zurückholen</string>
+    <string name="cancel">Abbrechen</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d Titel</item>
+        <item quantity="other">%d Titel</item>
+    </plurals>
+</resources>

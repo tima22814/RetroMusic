@@ -32,6 +32,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -95,10 +96,10 @@ private fun App(vm: PlayerViewModel) {
     if (granted == false && !loaded) {
         Column(Modifier.fillMaxSize().padding(32.dp), horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                "Плееру нужен доступ к музыке на телефоне, чтобы показать твои песни.",
+                stringResource(R.string.permission),
                 color = C.Fg2, fontSize = 16.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(top = 120.dp, bottom = 24.dp),
             )
-            GlossButton("Разрешить", { launcher.launch(permissions) }, fontSize = 14)
+            GlossButton(stringResource(R.string.allow), { launcher.launch(permissions) }, fontSize = 14)
         }
         return
     }

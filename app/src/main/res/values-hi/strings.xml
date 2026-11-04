@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">लाइब्रेरी</string>
+    <string name="now_playing">अभी\nचल रहा</string>
+    <string name="queue">कतार · %s</string>
+    <string name="position">%2$d में से %1$d</string>
+    <string name="no_albums">अभी कोई एल्बम नहीं है।</string>
+    <string name="done">हो गया</string>
+    <string name="songs_minutes">%1$s, %2$d मिनट</string>
+    <string name="permission">आपके गाने दिखाने के लिए प्लेयर को फ़ोन के संगीत तक पहुँच चाहिए।</string>
+    <string name="allow">अनुमति दें</string>
+    <string name="unknown_artist">अज्ञात कलाकार</string>
+    <string name="default_folder">संगीत</string>
+    <string name="various_artists">विभिन्न कलाकार</string>
+    <string name="folders">फ़ोल्डर</string>
+    <string name="artists">कलाकार</string>
+    <string name="albums">एल्बम</string>
+    <string name="songs">गाने</string>
+    <string name="genres">शैलियाँ</string>
+    <string name="more">और</string>
+    <string name="hidden">छिपे हुए</string>
+    <string name="hide_album_q">एल्बम छिपाएँ?</string>
+    <string name="hide_album_msg">“%s” लाइब्रेरी से हट जाएगा। फ़ाइलें फ़ोन पर रहेंगी, इसे “और → छिपे हुए” में वापस ला सकते हैं।</string>
+    <string name="hide">छिपाएँ</string>
+    <string name="hide_folder_q">फ़ोल्डर छिपाएँ?</string>
+    <string name="hide_folder_msg">फ़ोल्डर “%s” के सभी गाने लाइब्रेरी से हट जाएँगे। फ़ाइलें फ़ोन पर रहेंगी, इन्हें “और → छिपे हुए” में वापस ला सकते हैं।</string>
+    <string name="back">वापस</string>
+    <string name="restore_album_q">एल्बम वापस लाएँ?</string>
+    <string name="restore_album_msg">“%s” फिर से लाइब्रेरी में दिखेगा।</string>
+    <string name="restore">वापस लाएँ</string>
+    <string name="restore_folder_q">फ़ोल्डर वापस लाएँ?</string>
+    <string name="restore_folder_msg">“%s” के गाने फिर से लाइब्रेरी में दिखेंगे।</string>
+    <string name="no_songs">अभी कोई गाना नहीं है।\nफ़ोन पर संगीत डालें और “और → लाइब्रेरी रीफ़्रेश करें” पर टैप करें।</string>
+    <string name="shuffle">शफ़ल</string>
+    <string name="hide_album">एल्बम छिपाएँ</string>
+    <string name="empty_library">लाइब्रेरी खाली है।</string>
+    <string name="all_songs">सभी गाने</string>
+    <string name="shuffle_all">सब शफ़ल करें</string>
+    <string name="refresh">लाइब्रेरी रीफ़्रेश करें</string>
+    <string name="refresh_sub">फ़ोन का संगीत फिर से पढ़ें</string>
+    <string name="appearance">रूप</string>
+    <string name="theme_light">हल्का — गहरे के लिए टैप करें</string>
+    <string name="theme_dark">गहरा — हल्के के लिए टैप करें</string>
+    <string name="hidden_sub">लाइब्रेरी से हटाए गए एल्बम और फ़ोल्डर</string>
+    <string name="nothing_hidden">कुछ भी छिपा नहीं है।\nएल्बम या फ़ोल्डर छिपाने के लिए सूची में उसे देर तक दबाएँ।</string>
+    <string name="tap_to_restore">वापस लाने के लिए टैप करें</string>
+    <string name="cancel">रद्द करें</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d गाना</item>
+        <item quantity="other">%d गाने</item>
+    </plurals>
+</resources>

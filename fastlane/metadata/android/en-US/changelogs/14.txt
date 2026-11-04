@@ -1,2 +1,3 @@
 • Fixed garbled previous / play / next buttons on some devices
 • Glossy "now playing" badge in song lists
+• The app is now available in 20 languages, including English, French, German, Spanish, Chinese and Japanese

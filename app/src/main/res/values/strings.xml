@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Library</string>
+    <string name="now_playing">Now\nPlaying</string>
+    <string name="queue">Queue · %s</string>
+    <string name="position">%1$d of %2$d</string>
+    <string name="no_albums">No albums yet.</string>
+    <string name="done">Done</string>
+    <string name="songs_minutes">%1$s, %2$d min</string>
+    <string name="permission">The player needs access to the music on your phone to show your songs.</string>
+    <string name="allow">Allow</string>
+    <string name="unknown_artist">Unknown artist</string>
+    <string name="default_folder">Music</string>
+    <string name="various_artists">Various artists</string>
+    <string name="folders">Folders</string>
+    <string name="artists">Artists</string>
+    <string name="albums">Albums</string>
+    <string name="songs">Songs</string>
+    <string name="genres">Genres</string>
+    <string name="more">More</string>
+    <string name="hidden">Hidden</string>
+    <string name="hide_album_q">Hide album?</string>
+    <string name="hide_album_msg">“%s” will disappear from the library. The files stay on your phone; you can bring it back in “More → Hidden”.</string>
+    <string name="hide">Hide</string>
+    <string name="hide_folder_q">Hide folder?</string>
+    <string name="hide_folder_msg">All songs from the folder “%s” will disappear from the library. The files stay on your phone; you can bring them back in “More → Hidden”.</string>
+    <string name="back">Back</string>
+    <string name="restore_album_q">Restore album?</string>
+    <string name="restore_album_msg">“%s” will appear in the library again.</string>
+    <string name="restore">Restore</string>
+    <string name="restore_folder_q">Restore folder?</string>
+    <string name="restore_folder_msg">Songs from “%s” will appear in the library again.</string>
+    <string name="no_songs">No songs yet.\nCopy music to your phone and tap “More → Refresh library”.</string>
+    <string name="shuffle">Shuffle</string>
+    <string name="hide_album">Hide album</string>
+    <string name="empty_library">The library is empty.</string>
+    <string name="all_songs">All songs</string>
+    <string name="shuffle_all">Shuffle all</string>
+    <string name="refresh">Refresh library</string>
+    <string name="refresh_sub">Rescan the music on your phone</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme_light">Light — tap for dark</string>
+    <string name="theme_dark">Dark — tap for light</string>
+    <string name="hidden_sub">Albums and folders taken out of the library</string>
+    <string name="nothing_hidden">Nothing is hidden.\nTo hide an album or folder, press and hold it in the list.</string>
+    <string name="tap_to_restore">Tap to restore</string>
+    <string name="cancel">Cancel</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d song</item>
+        <item quantity="other">%d songs</item>
+    </plurals>
+</resources>

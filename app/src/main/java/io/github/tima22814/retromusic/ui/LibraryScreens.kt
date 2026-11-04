@@ -34,7 +34,10 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.layout.ContentScale
+import androidx.annotation.StringRes
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.pluralStringResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -44,6 +47,7 @@ import io.github.tima22814.retromusic.ArtLoader
 import io.github.tima22814.retromusic.Library
 import io.github.tima22814.retromusic.PlaybackState
 import io.github.tima22814.retromusic.PlayerViewModel
+import io.github.tima22814.retromusic.R
 import io.github.tima22814.retromusic.Track
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -56,16 +60,8 @@ fun fmt(ms: Long): String {
     return "%d:%02d".format(s / 60, s % 60)
 }
 
-fun songsWord(n: Int): String {
-    val m10 = n % 10
-    val m100 = n % 100
-    val w = when {
-        m10 == 1 && m100 != 11 -> "песня"
-        m10 in 2..4 && (m100 < 12 || m100 > 14) -> "песни"
-        else -> "песен"
-    }
-    return "$n $w"
-}
+@Composable
+fun songsWord(n: Int): String = pluralStringResource(R.plurals.songs_count, n, n)
 
 private fun sectionKey(s: String): String {
     val c = s.trim().firstOrNull()?.uppercaseChar() ?: return "#"
@@ -95,8 +91,13 @@ fun Art(track: Track, modifier: Modifier, contentScale: ContentScale = ContentSc
 /* ---------- screens ---------- */
 
 sealed interface Screen {
-    val title: String
+    /** Folder / artist / album name; empty for the fixed screens, which name a [titleRes]. */
+    val title: String get() = ""
+    @get:StringRes val titleRes: Int get() = 0
 }
+
+@Composable
+fun Screen.label(): String = if (titleRes != 0) stringResource(titleRes) else title
 
 data class SongsScreen(
     override val title: String,
@@ -108,31 +109,39 @@ data class SongsScreen(
     val durations: Boolean = false,
     val album: Album? = null,
     val sub: (Track) -> String? = { listOf(it.artist, it.album).filter(String::isNotBlank).joinToString(" — ") },
+    override val titleRes: Int = 0,
 ) : Screen
 
-data object FoldersScreen : Screen { override val title = "Папки" }
-data object ArtistsScreen : Screen { override val title = "Исполнители" }
+data object FoldersScreen : Screen { override val titleRes = R.string.folders }
+data object ArtistsScreen : Screen { override val titleRes = R.string.artists }
 data class ArtistScreen(override val title: String, val songs: List<Track>) : Screen
-data object AlbumsScreen : Screen { override val title = "Альбомы" }
-data object GenresScreen : Screen { override val title = "Жанры" }
-data object MoreScreen : Screen { override val title = "Ещё" }
-data object HiddenScreen : Screen { override val title = "Скрытые" }
+data object AlbumsScreen : Screen { override val titleRes = R.string.albums }
+data object GenresScreen : Screen { override val titleRes = R.string.genres }
+data object MoreScreen : Screen { override val titleRes = R.string.more }
+data object HiddenScreen : Screen { override val titleRes = R.string.hidden }
 
-private data class Confirm(val title: String, val message: String, val button: String, val action: () -> Unit)
+/** [message] takes the album / folder [name] as its argument. */
+private data class Confirm(
+    @StringRes val title: Int,
+    @StringRes val message: Int,
+    val name: String,
+    @StringRes val button: Int,
+    val action: () -> Unit,
+)
 
 private val tabs = listOf(
-    "Папки" to Icons.Folders,
-    "Исполнители" to Icons.Artists,
-    "Альбомы" to Icons.Albums,
-    "Песни" to Icons.Songs,
-    "Ещё" to Icons.More,
+    R.string.folders to Icons.Folders,
+    R.string.artists to Icons.Artists,
+    R.string.albums to Icons.Albums,
+    R.string.songs to Icons.Songs,
+    R.string.more to Icons.More,
 )
 
 private fun rootFor(tab: Int, tracks: List<Track>): Screen = when (tab) {
     0 -> FoldersScreen
     1 -> ArtistsScreen
     2 -> AlbumsScreen
-    3 -> SongsScreen("Песни", tracks, index = true, shuffleRow = true)
+    3 -> SongsScreen("", tracks, index = true, shuffleRow = true, titleRes = R.string.songs)
     else -> MoreScreen
 }
 
@@ -166,12 +175,12 @@ fun LibraryUi(
     val hiddenAlbums by vm.hiddenAlbums.collectAsStateWithLifecycle()
     val hiddenFolders by vm.hiddenFolders.collectAsStateWithLifecycle()
     val hideAlbum: (String) -> Unit = { name ->
-        confirm = Confirm("Скрыть альбом?", "«$name» пропадёт из медиатеки. Файлы останутся на телефоне, вернуть можно в «Ещё → Скрытые».", "Скрыть") {
+        confirm = Confirm(R.string.hide_album_q, R.string.hide_album_msg, name, R.string.hide) {
             vm.setAlbumHidden(name, true)
         }
     }
     val hideFolder: (String) -> Unit = { name ->
-        confirm = Confirm("Скрыть папку?", "Все песни из папки «$name» пропадут из медиатеки. Файлы останутся на телефоне, вернуть можно в «Ещё → Скрытые».", "Скрыть") {
+        confirm = Confirm(R.string.hide_folder_q, R.string.hide_folder_msg, name, R.string.hide) {
             vm.setFolderHidden(name, true)
         }
     }
@@ -179,10 +188,10 @@ fun LibraryUi(
     Box(Modifier.fillMaxSize()) {
     Column(Modifier.fillMaxSize().background(C.Bg)) {
         NavBar(
-            title = top.title,
+            title = top.label(),
             left = when {
                 stack.size > 1 -> {
-                    { val prev = stack[stack.size - 2].title; BackButton(if (prev.length > 11) "Назад" else prev) { pop() } }
+                    { val prev = stack[stack.size - 2].label(); BackButton(if (prev.length > 11) stringResource(R.string.back) else prev) { pop() } }
                 }
                 top is AlbumsScreen -> {
                     { GlossButton("Cover Flow", onCoverFlow, fontSize = 11) }
@@ -223,19 +232,21 @@ fun LibraryUi(
                 HiddenScreen -> HiddenList(
                     hiddenAlbums, hiddenFolders,
                     onRestoreAlbum = { name ->
-                        confirm = Confirm("Вернуть альбом?", "«$name» снова появится в медиатеке.", "Вернуть") { vm.setAlbumHidden(name, false) }
+                        confirm = Confirm(R.string.restore_album_q, R.string.restore_album_msg, name, R.string.restore) { vm.setAlbumHidden(name, false) }
                     },
                     onRestoreFolder = { name ->
-                        confirm = Confirm("Вернуть папку?", "Песни из «$name» снова появятся в медиатеке.", "Вернуть") { vm.setFolderHidden(name, false) }
+                        confirm = Confirm(R.string.restore_folder_q, R.string.restore_folder_msg, name, R.string.restore) { vm.setFolderHidden(name, false) }
                     },
                 )
             }
         }
-        TabBar(tabs, tab) { i ->
+        TabBar(tabs.map { (res, icon) -> stringResource(res) to icon }, tab) { i ->
             if (i == tab) stacks.remove(tab) else tab = i
         }
     }
-    confirm?.let { c -> ConfirmDialog(c.title, c.message, c.button, c.action) { confirm = null } }
+    confirm?.let { c ->
+        ConfirmDialog(stringResource(c.title), stringResource(c.message, c.name), stringResource(c.button), c.action) { confirm = null }
+    }
     }
 }
 
@@ -299,12 +310,12 @@ private fun SongsList(
     hideAlbum: (String) -> Unit,
 ) {
     val songs = remember(s) { s.songs.sortedWith(if (s.albumOrder) Library.albumOrder else Library.byTitle) }
-    if (songs.isEmpty()) return EmptyText("Песен пока нет.\nЗакинь музыку на телефон и нажми «Ещё → Обновить медиатеку».")
+    if (songs.isEmpty()) return EmptyText(stringResource(R.string.no_songs))
     val indexOf = remember(songs) { songs.withIndex().associate { it.value.id to it.index } }
 
     val header: LazyListScope.() -> Unit = {
         s.album?.let { a -> item { AlbumHeader(a) { hideAlbum(a.name) } } }
-        if (s.shuffleRow) item { ShuffleRow("Перемешать", null) { shuffle(songs) } }
+        if (s.shuffleRow) item { ShuffleRow(stringResource(R.string.shuffle), null) { shuffle(songs) } }
     }
     val row: @Composable (Track) -> Unit = { t ->
         val i = indexOf.getValue(t.id)
@@ -352,8 +363,8 @@ private fun AlbumHeader(a: Album, onHide: () -> Unit) {
             Text(a.artist, color = C.Muted, fontSize = 13.sp, maxLines = 1)
             Text(a.name, color = C.Fg, fontSize = 17.sp, fontWeight = FontWeight.Bold, maxLines = 2)
             val minutes = a.songs.sumOf { it.durationMs } / 60000
-            Text("${songsWord(a.songs.size)}, $minutes мин.", color = C.Dim, fontSize = 12.sp)
-            Box(Modifier.padding(top = 8.dp)) { GlossButton("Скрыть альбом", onHide, fontSize = 11) }
+            Text(stringResource(R.string.songs_minutes, songsWord(a.songs.size), minutes), color = C.Dim, fontSize = 12.sp)
+            Box(Modifier.padding(top = 8.dp)) { GlossButton(stringResource(R.string.hide_album), onHide, fontSize = 11) }
         }
     }
 }
@@ -367,7 +378,7 @@ private fun GroupList(
     onOpen: (String, List<Track>) -> Unit,
 ) {
     val groups = remember(tracks) { tracks.groupBy(key).toList().sortedWith(compareBy(Library.collator) { it.first }) }
-    if (groups.isEmpty()) return EmptyText("Медиатека пуста.")
+    if (groups.isEmpty()) return EmptyText(stringResource(R.string.empty_library))
     LazyColumn(Modifier.fillMaxSize()) {
         items(groups, key = { it.first }) { (name, songs) ->
             ListRow({ onOpen(name, songs) }, chevron = true, onLongClick = { onHide(name) }) {
@@ -402,7 +413,7 @@ private fun ArtistView(s: ArtistScreen, push: (Screen) -> Unit, hideAlbum: (Stri
     LazyColumn(Modifier.fillMaxSize()) {
         item {
             ListRow({ push(artistSongs(s.title, s.songs)) }, chevron = true) {
-                TwoLines("Все песни", songsWord(s.songs.size), Modifier.weight(1f))
+                TwoLines(stringResource(R.string.all_songs), songsWord(s.songs.size), Modifier.weight(1f))
             }
         }
         items(albums, key = { it.name }) { a ->
@@ -440,26 +451,30 @@ private fun MoreList(
         item {
             ListRow(onGenres, chevron = true) {
                 Box(Modifier.width(40.dp)) { Ico(Icons.Genre, 24.dp, C.Fg2) }
-                TwoLines("Жанры", null, Modifier.weight(1f))
+                TwoLines(stringResource(R.string.genres), null, Modifier.weight(1f))
             }
         }
-        item { ShuffleRow("Перемешать всё", songsWord(count), onShuffleAll) }
+        item { ShuffleRow(stringResource(R.string.shuffle_all), songsWord(count), onShuffleAll) }
         item {
             ListRow(onRefresh) {
                 Box(Modifier.width(40.dp)) { Ico(Icons.Refresh, 24.dp, C.Fg2) }
-                TwoLines("Обновить медиатеку", "Перечитать музыку на телефоне", Modifier.weight(1f))
+                TwoLines(stringResource(R.string.refresh), stringResource(R.string.refresh_sub), Modifier.weight(1f))
             }
         }
         item {
             ListRow(onTheme) {
                 Box(Modifier.width(40.dp)) { Ico(if (light) Icons.Sun else Icons.Moon, 24.dp, C.Fg2) }
-                TwoLines("Оформление", if (light) "Светлое — нажми для тёмного" else "Тёмное — нажми для светлого", Modifier.weight(1f))
+                TwoLines(
+                    stringResource(R.string.appearance),
+                    stringResource(if (light) R.string.theme_light else R.string.theme_dark),
+                    Modifier.weight(1f),
+                )
             }
         }
         item {
             ListRow(onHidden, chevron = true) {
                 Box(Modifier.width(40.dp)) { Ico(Icons.Albums, 24.dp, C.Fg2) }
-                TwoLines("Скрытые", "Альбомы и папки, убранные из медиатеки", Modifier.weight(1f))
+                TwoLines(stringResource(R.string.hidden), stringResource(R.string.hidden_sub), Modifier.weight(1f))
                 SideText(hiddenCount.toString())
             }
         }
@@ -474,24 +489,24 @@ private fun HiddenList(
     onRestoreFolder: (String) -> Unit,
 ) {
     if (albums.isEmpty() && folders.isEmpty()) {
-        return EmptyText("Ничего не скрыто.\nЧтобы скрыть альбом или папку, подержи палец на ней в списке.")
+        return EmptyText(stringResource(R.string.nothing_hidden))
     }
     LazyColumn(Modifier.fillMaxSize()) {
         if (folders.isNotEmpty()) {
-            item { SectionHeader("Папки") }
+            item { SectionHeader(stringResource(R.string.folders)) }
             items(folders.sortedWith(Library.collator)) { name ->
                 ListRow({ onRestoreFolder(name) }) {
                     Box(Modifier.width(40.dp)) { Ico(Icons.Folders, 26.dp, C.Dim) }
-                    TwoLines(name, "Нажми, чтобы вернуть", Modifier.weight(1f))
+                    TwoLines(name, stringResource(R.string.tap_to_restore), Modifier.weight(1f))
                 }
             }
         }
         if (albums.isNotEmpty()) {
-            item { SectionHeader("Альбомы") }
+            item { SectionHeader(stringResource(R.string.albums)) }
             items(albums.sortedWith(Library.collator)) { name ->
                 ListRow({ onRestoreAlbum(name) }) {
                     Box(Modifier.width(40.dp)) { Ico(Icons.Albums, 24.dp, C.Dim) }
-                    TwoLines(name, "Нажми, чтобы вернуть", Modifier.weight(1f))
+                    TwoLines(name, stringResource(R.string.tap_to_restore), Modifier.weight(1f))
                 }
             }
         }

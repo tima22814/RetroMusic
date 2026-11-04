@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Kitaplık</string>
+    <string name="now_playing">Şimdi\nçalıyor</string>
+    <string name="queue">Sıra · %s</string>
+    <string name="position">%1$d / %2$d</string>
+    <string name="no_albums">Henüz albüm yok.</string>
+    <string name="done">Bitti</string>
+    <string name="songs_minutes">%1$s, %2$d dk</string>
+    <string name="permission">Şarkılarını gösterebilmesi için oynatıcının telefondaki müziklere erişmesi gerekiyor.</string>
+    <string name="allow">İzin ver</string>
+    <string name="unknown_artist">Bilinmeyen sanatçı</string>
+    <string name="default_folder">Müzik</string>
+    <string name="various_artists">Çeşitli sanatçılar</string>
+    <string name="folders">Klasörler</string>
+    <string name="artists">Sanatçılar</string>
+    <string name="albums">Albümler</string>
+    <string name="songs">Şarkılar</string>
+    <string name="genres">Türler</string>
+    <string name="more">Diğer</string>
+    <string name="hidden">Gizli</string>
+    <string name="hide_album_q">Albüm gizlensin mi?</string>
+    <string name="hide_album_msg">“%s” kitaplıktan kaybolacak. Dosyalar telefonda kalır; “Diğer → Gizli” bölümünden geri getirebilirsin.</string>
+    <string name="hide">Gizle</string>
+    <string name="hide_folder_q">Klasör gizlensin mi?</string>
+    <string name="hide_folder_msg">“%s” klasöründeki tüm şarkılar kitaplıktan kaybolacak. Dosyalar telefonda kalır; “Diğer → Gizli” bölümünden geri getirebilirsin.</string>
+    <string name="back">Geri</string>
+    <string name="restore_album_q">Albüm geri getirilsin mi?</string>
+    <string name="restore_album_msg">“%s” yeniden kitaplıkta görünecek.</string>
+    <string name="restore">Geri getir</string>
+    <string name="restore_folder_q">Klasör geri getirilsin mi?</string>
+    <string name="restore_folder_msg">“%s” içindeki şarkılar yeniden kitaplıkta görünecek.</string>
+    <string name="no_songs">Henüz şarkı yok.\nTelefona müzik at ve “Diğer → Kitaplığı yenile” seçeneğine dokun.</string>
+    <string name="shuffle">Karıştır</string>
+    <string name="hide_album">Albümü gizle</string>
+    <string name="empty_library">Kitaplık boş.</string>
+    <string name="all_songs">Tüm şarkılar</string>
+    <string name="shuffle_all">Tümünü karıştır</string>
+    <string name="refresh">Kitaplığı yenile</string>
+    <string name="refresh_sub">Telefondaki müzikleri yeniden tara</string>
+    <string name="appearance">Görünüm</string>
+    <string name="theme_light">Açık — koyu için dokun</string>
+    <string name="theme_dark">Koyu — açık için dokun</string>
+    <string name="hidden_sub">Kitaplıktan çıkarılan albüm ve klasörler</string>
+    <string name="nothing_hidden">Gizli bir şey yok.\nBir albümü veya klasörü gizlemek için listede üzerine basılı tut.</string>
+    <string name="tap_to_restore">Geri getirmek için dokun</string>
+    <string name="cancel">İptal</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d şarkı</item>
+        <item quantity="other">%d şarkı</item>
+    </plurals>
+</resources>

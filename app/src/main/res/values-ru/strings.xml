@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Медиатека</string>
+    <string name="now_playing">Сейчас\nиграет</string>
+    <string name="queue">Очередь · %s</string>
+    <string name="position">%1$d из %2$d</string>
+    <string name="no_albums">Альбомов пока нет.</string>
+    <string name="done">Готово</string>
+    <string name="songs_minutes">%1$s, %2$d мин.</string>
+    <string name="permission">Плееру нужен доступ к музыке на телефоне, чтобы показать твои песни.</string>
+    <string name="allow">Разрешить</string>
+    <string name="unknown_artist">Неизвестный исполнитель</string>
+    <string name="default_folder">Музыка</string>
+    <string name="various_artists">Разные исполнители</string>
+    <string name="folders">Папки</string>
+    <string name="artists">Исполнители</string>
+    <string name="albums">Альбомы</string>
+    <string name="songs">Песни</string>
+    <string name="genres">Жанры</string>
+    <string name="more">Ещё</string>
+    <string name="hidden">Скрытые</string>
+    <string name="hide_album_q">Скрыть альбом?</string>
+    <string name="hide_album_msg">«%s» пропадёт из медиатеки. Файлы останутся на телефоне, вернуть можно в «Ещё → Скрытые».</string>
+    <string name="hide">Скрыть</string>
+    <string name="hide_folder_q">Скрыть папку?</string>
+    <string name="hide_folder_msg">Все песни из папки «%s» пропадут из медиатеки. Файлы останутся на телефоне, вернуть можно в «Ещё → Скрытые».</string>
+    <string name="back">Назад</string>
+    <string name="restore_album_q">Вернуть альбом?</string>
+    <string name="restore_album_msg">«%s» снова появится в медиатеке.</string>
+    <string name="restore">Вернуть</string>
+    <string name="restore_folder_q">Вернуть папку?</string>
+    <string name="restore_folder_msg">Песни из «%s» снова появятся в медиатеке.</string>
+    <string name="no_songs">Песен пока нет.\nЗакинь музыку на телефон и нажми «Ещё → Обновить медиатеку».</string>
+    <string name="shuffle">Перемешать</string>
+    <string name="hide_album">Скрыть альбом</string>
+    <string name="empty_library">Медиатека пуста.</string>
+    <string name="all_songs">Все песни</string>
+    <string name="shuffle_all">Перемешать всё</string>
+    <string name="refresh">Обновить медиатеку</string>
+    <string name="refresh_sub">Перечитать музыку на телефоне</string>
+    <string name="appearance">Оформление</string>
+    <string name="theme_light">Светлое — нажми для тёмного</string>
+    <string name="theme_dark">Тёмное — нажми для светлого</string>
+    <string name="hidden_sub">Альбомы и папки, убранные из медиатеки</string>
+    <string name="nothing_hidden">Ничего не скрыто.\nЧтобы скрыть альбом или папку, подержи палец на ней в списке.</string>
+    <string name="tap_to_restore">Нажми, чтобы вернуть</string>
+    <string name="cancel">Отмена</string>
+    <plurals name="songs_count">
+        <item quantity="one">%d песня</item>
+        <item quantity="few">%d песни</item>
+        <item quantity="many">%d песен</item>
+        <item quantity="other">%d песни</item>
+    </plurals>
+</resources>

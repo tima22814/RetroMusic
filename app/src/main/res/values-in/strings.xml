@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="library">Pustaka</string>
+    <string name="now_playing">Sedang\ndiputar</string>
+    <string name="queue">Antrean · %s</string>
+    <string name="position">%1$d dari %2$d</string>
+    <string name="no_albums">Belum ada album.</string>
+    <string name="done">Selesai</string>
+    <string name="songs_minutes">%1$s, %2$d mnt</string>
+    <string name="permission">Pemutar perlu akses ke musik di ponsel untuk menampilkan lagu-lagumu.</string>
+    <string name="allow">Izinkan</string>
+    <string name="unknown_artist">Artis tidak dikenal</string>
+    <string name="default_folder">Musik</string>
+    <string name="various_artists">Berbagai artis</string>
+    <string name="folders">Folder</string>
+    <string name="artists">Artis</string>
+    <string name="albums">Album</string>
+    <string name="songs">Lagu</string>
+    <string name="genres">Genre</string>
+    <string name="more">Lainnya</string>
+    <string name="hidden">Tersembunyi</string>
+    <string name="hide_album_q">Sembunyikan album?</string>
+    <string name="hide_album_msg">“%s” akan hilang dari pustaka. File tetap ada di ponsel; kamu bisa mengembalikannya di “Lainnya → Tersembunyi”.</string>
+    <string name="hide">Sembunyikan</string>
+    <string name="hide_folder_q">Sembunyikan folder?</string>
+    <string name="hide_folder_msg">Semua lagu dari folder “%s” akan hilang dari pustaka. File tetap ada di ponsel; kamu bisa mengembalikannya di “Lainnya → Tersembunyi”.</string>
+    <string name="back">Kembali</string>
+    <string name="restore_album_q">Kembalikan album?</string>
+    <string name="restore_album_msg">“%s” akan muncul lagi di pustaka.</string>
+    <string name="restore">Kembalikan</string>
+    <string name="restore_folder_q">Kembalikan folder?</string>
+    <string name="restore_folder_msg">Lagu dari “%s” akan muncul lagi di pustaka.</string>
+    <string name="no_songs">Belum ada lagu.\nSalin musik ke ponsel lalu ketuk “Lainnya → Segarkan pustaka”.</string>
+    <string name="shuffle">Acak</string>
+    <string name="hide_album">Sembunyikan album</string>
+    <string name="empty_library">Pustaka kosong.</string>
+    <string name="all_songs">Semua lagu</string>
+    <string name="shuffle_all">Acak semua</string>
+    <string name="refresh">Segarkan pustaka</string>
+    <string name="refresh_sub">Baca ulang musik di ponsel</string>
+    <string name="appearance">Tampilan</string>
+    <string name="theme_light">Terang — ketuk untuk gelap</string>
+    <string name="theme_dark">Gelap — ketuk untuk terang</string>
+    <string name="hidden_sub">Album dan folder yang dikeluarkan dari pustaka</string>
+    <string name="nothing_hidden">Tidak ada yang disembunyikan.\nUntuk menyembunyikan album atau folder, tekan lama di daftar.</string>
+    <string name="tap_to_restore">Ketuk untuk mengembalikan</string>
+    <string name="cancel">Batal</string>
+    <plurals name="songs_count">
+        <item quantity="other">%d lagu</item>
+    </plurals>
+</resources>

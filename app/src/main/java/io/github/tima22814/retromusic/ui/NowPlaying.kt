@@ -45,6 +45,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.input.pointer.pointerInput
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
@@ -55,6 +56,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.Player
+import io.github.tima22814.retromusic.R
 import io.github.tima22814.retromusic.PlaybackState
 import io.github.tima22814.retromusic.PlayerViewModel
 
@@ -76,7 +78,7 @@ private fun NowPlayingContent(vm: PlayerViewModel, state: PlaybackState, onBack:
         NavBar(
             title = t.title,
             brush = Brush.verticalGradient(listOf(Color(0xE6282828), Color(0xE6000000))),
-            left = { BackButton("Медиатека", onBack) },
+            left = { BackButton(stringResource(R.string.library), onBack) },
             right = {
                 // Shows the list icon on the cover side and the cover thumbnail on the list side.
                 GlossButton("", { flipped = !flipped }, padStart = 0.dp, padEnd = 0.dp) {
@@ -135,7 +137,7 @@ private fun Scrubber(vm: PlayerViewModel, state: PlaybackState) {
         Row(Modifier.fillMaxWidth().padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
             ModeButton(Icons.Repeat, state.repeat != Player.REPEAT_MODE_OFF, badge = if (state.repeat == Player.REPEAT_MODE_ONE) "1" else null) { vm.cycleRepeat() }
             Text(
-                "${state.queuePos + 1} из ${state.queue.size}", color = C.Muted, fontSize = 11.sp,
+                stringResource(R.string.position, state.queuePos + 1, state.queue.size), color = C.Muted, fontSize = 11.sp,
                 modifier = Modifier.weight(1f), textAlign = TextAlign.Center,
             )
             ModeButton(Icons.Shuffle, state.shuffle) { vm.setShuffle(!state.shuffle) }
@@ -162,7 +164,7 @@ private fun QueueList(vm: PlayerViewModel, state: PlaybackState) {
         Box(
             Modifier.fillMaxWidth().background(Brush.verticalGradient(listOf(Color(0xFF161616), C.Row))).padding(10.dp),
             contentAlignment = Alignment.Center,
-        ) { Text("Очередь · ${songsWord(state.queue.size)}", color = C.Muted, fontSize = 13.sp) }
+        ) { Text(stringResource(R.string.queue, songsWord(state.queue.size)), color = C.Muted, fontSize = 13.sp) }
         LazyColumn(Modifier.fillMaxSize(), state = listState) {
             itemsIndexed(state.queue) { i, q ->
                 ListRow({ if (i == state.queuePos) vm.toggle() else vm.playQueueAt(i) }) {
