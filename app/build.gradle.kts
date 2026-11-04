@@ -14,8 +14,8 @@ android {
         applicationId = "io.github.tima22814.retromusic"
         minSdk = 26
         targetSdk = 35
-        versionCode = 13
-        versionName = "1.12"
+        versionCode = 14
+        versionName = "1.13"
     }
 
     // The release key lives outside the repo. Without it (e.g. on F-Droid's build

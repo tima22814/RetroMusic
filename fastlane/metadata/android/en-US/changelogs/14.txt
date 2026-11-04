@@ -1,0 +1,2 @@
+• Fixed garbled previous / play / next buttons on some devices
+• Glossy "now playing" badge in song lists
