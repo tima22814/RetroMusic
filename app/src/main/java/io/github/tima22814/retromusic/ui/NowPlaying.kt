@@ -192,9 +192,9 @@ private fun Controls(vm: PlayerViewModel, state: PlaybackState) {
     ) {
         // The bar is split into three keys (play a little narrower); each lights up across its whole part.
         Row(Modifier.fillMaxWidth().height(76.dp).padding(2.dp)) {
-            CtlButton(Icons.Prev, 36, Modifier.weight(1f)) { vm.prev() }
-            CtlButton(if (state.isPlaying) Icons.Pause else Icons.Play, 40, Modifier.weight(0.8f)) { vm.toggle() }
-            CtlButton(Icons.Next, 36, Modifier.weight(1f)) { vm.next() }
+            CtlButton(Glyphs.Prev, 36, Modifier.weight(1f)) { vm.prev() }
+            CtlButton(if (state.isPlaying) Glyphs.Pause else Glyphs.Play, 40, Modifier.weight(0.8f)) { vm.toggle() }
+            CtlButton(Glyphs.Next, 36, Modifier.weight(1f)) { vm.next() }
         }
         Row(Modifier.padding(start = 24.dp, end = 24.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
             Ico(Icons.VolLow, 16.dp, C.Muted)
@@ -210,9 +210,9 @@ private fun Controls(vm: PlayerViewModel, state: PlaybackState) {
 }
 
 @Composable
-private fun CtlButton(icon: ImageVector, size: Int, modifier: Modifier, onClick: () -> Unit) {
+private fun CtlButton(icon: Glyph, size: Int, modifier: Modifier, onClick: () -> Unit) {
     PressGlow(modifier.fillMaxHeight().padding(horizontal = 1.dp), onClick) { lit ->
-        Ico(icon, size.dp, lerp(C.Fg, Color(0xFF5C5C5C), lit))
+        GlyphIco(icon, size.dp, lerp(C.Fg, Color(0xFF5C5C5C), lit))
     }
 }
 

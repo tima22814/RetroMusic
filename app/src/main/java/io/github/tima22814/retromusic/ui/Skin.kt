@@ -1,6 +1,7 @@
 package io.github.tima22814.retromusic.ui
 
 import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -53,6 +54,8 @@ import androidx.compose.foundation.shape.GenericShape
 import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.drawscope.scale
+import androidx.compose.ui.graphics.drawscope.translate
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.graphics.vector.PathParser
 import androidx.compose.ui.input.pointer.pointerInput
@@ -181,6 +184,8 @@ private fun icon(w: Float, h: Float, vararg paths: Pair<String, Float>): ImageVe
     return b.build()
 }
 
+private const val PLAY = "M6 3l15 9-15 9z"
+
 private fun circle(cx: Float, cy: Float, r: Float) = "M${cx - r},$cy a$r,$r 0 1,0 ${2 * r},0 a$r,$r 0 1,0 ${-2 * r},0z"
 
 object Icons {
@@ -195,10 +200,7 @@ object Icons {
     val Genre = icon(24f, 24f, "M8 3h7l-3 9h4l-6 9 1.5-7H8z" to 1f)
     val ShuffleRow = icon(24f, 24f, "M3 7h4l9 10h3v-3l4 4-4 4v-3h-4L6 9H3zm13-2h3V2l4 4-4 4V7h-3l-2.5 2.8-1.4-1.6zM3 15h3l2.5-2.8 1.4 1.6L7 17H3z" to 1f)
     val Refresh = icon(24f, 24f, "M12 4V1L8 5l4 4V6a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8z" to 1f)
-    val Play = icon(24f, 24f, "M6 3l15 9-15 9z" to 1f)
-    val Pause = icon(24f, 24f, "M5 3h5v18H5zm9 0h5v18h-5z" to 1f)
-    val Prev = icon(30f, 24f, "M3 4h3v16H3zm3 8l11-8v16zm10 0l11-8v16z" to 1f)
-    val Next = icon(30f, 24f, "M24 4h3v16h-3zm0 8L13 4v16zm-10 0L3 4v16z" to 1f)
+    val Play = icon(24f, 24f, PLAY to 1f)
     val Repeat = icon(26f, 22f, "M5 9a4 4 0 0 1 4-4h10V2l5 4.5L19 11V8H9a1 1 0 0 0-1 1v2H5zm16 4a4 4 0 0 1-4 4H7v3l-5-4.5L7 11v3h10a1 1 0 0 0 1-1v-2h3z" to 1f)
     val Shuffle = icon(26f, 22f, "M2 5h5l10 11h3v-3l5 4.5-5 4.5v-3h-4.5L5 8H2zm15 0h3V2l5 4.5L20 11V8h-2l-3 3.4-2-2.2zM2 14h3l2.8-3.1 2 2.2L6.5 17H2z" to 1f)
     val List = icon(20f, 16f, "M0 1h3v2H0zm5 0h15v2H5zM0 7h3v2H0zm5 0h15v2H5zM0 13h3v2H0zm5 0h15v2H5z" to 1f)
@@ -214,6 +216,32 @@ object Icons {
 @Composable
 fun Ico(v: ImageVector, size: Dp, tint: Color, modifier: Modifier = Modifier) {
     Image(v, null, modifier.size(size), colorFilter = ColorFilter.tint(tint))
+}
+
+/**
+ * Icon drawn straight onto the canvas, skipping the bitmap VectorPainter caches it in.
+ * Some GPU drivers garble that bitmap at the transport keys' size (seen on Android 12).
+ */
+class Glyph(val w: Float, val h: Float, d: String) {
+    val path = PathParser().parsePathString(d).toPath()
+}
+
+object Glyphs {
+    val Play = Glyph(24f, 24f, PLAY)
+    val Pause = Glyph(24f, 24f, "M5 3h5v18H5zm9 0h5v18h-5z")
+    val Prev = Glyph(30f, 24f, "M3 4h3v16H3zm3 8l11-8v16zm10 0l11-8v16z")
+    val Next = Glyph(30f, 24f, "M24 4h3v16h-3zm0 8L13 4v16zm-10 0L3 4v16z")
+}
+
+/** Same fit-and-centre placement as [Ico]. */
+@Composable
+fun GlyphIco(g: Glyph, size: Dp, tint: Color, modifier: Modifier = Modifier) {
+    Canvas(modifier.size(size)) {
+        val s = minOf(this.size.width / g.w, this.size.height / g.h)
+        translate((this.size.width - g.w * s) / 2, (this.size.height - g.h * s) / 2) {
+            scale(s, s, pivot = Offset.Zero) { drawPath(g.path, tint) }
+        }
+    }
 }
 
 /* ---------- navigation bar ---------- */
