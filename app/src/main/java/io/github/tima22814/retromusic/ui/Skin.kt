@@ -1,5 +1,6 @@
 package io.github.tima22814.retromusic.ui
 
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -348,13 +349,22 @@ fun Chevron() {
 
 @Composable
 fun TwoLines(t1: String, t2: String?, modifier: Modifier = Modifier, playing: Boolean = false) {
-    Column(modifier) {
-        Text(
-            (if (playing) "▶ " else "") + t1, color = C.Fg, fontSize = 16.sp, fontWeight = FontWeight.Bold,
-            maxLines = 1, overflow = TextOverflow.Ellipsis,
-        )
-        if (!t2.isNullOrEmpty()) Text(t2, color = C.Muted, fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+    Row(modifier, verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Text(t1, color = C.Fg, fontSize = 16.sp, fontWeight = FontWeight.Bold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+            if (!t2.isNullOrEmpty()) Text(t2, color = C.Muted, fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        }
+        if (playing) PlayingBadge(Modifier.padding(start = 8.dp))
     }
+}
+
+/** Glossy round "now playing" badge at the end of a song row. */
+@Composable
+fun PlayingBadge(modifier: Modifier = Modifier) {
+    Box(
+        modifier.size(20.dp).background(C.Button, CircleShape).border(1.dp, Color.Black, CircleShape),
+        contentAlignment = Alignment.Center,
+    ) { Ico(Icons.Play, 10.dp, Color(0xFF111111), Modifier.padding(start = 1.dp)) }
 }
 
 @Composable

@@ -420,10 +420,7 @@ private fun AlbumSongs(vm: PlayerViewModel, album: io.github.tima22814.retromusi
                     maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.weight(1f),
                 )
                 if (playing) {
-                    Box(
-                        Modifier.padding(horizontal = 8.dp).size(20.dp).background(C.Button, CircleShape).border(1.dp, Color.Black, CircleShape),
-                        contentAlignment = Alignment.Center,
-                    ) { Ico(Icons.Play, 10.dp, Color(0xFF111111), Modifier.padding(start = 1.dp)) }
+                    PlayingBadge(Modifier.padding(horizontal = 8.dp))
                 }
                 Text(fmt(t.durationMs), color = C.Fg2, fontSize = 14.sp, modifier = Modifier.padding(start = 6.dp))
             }
