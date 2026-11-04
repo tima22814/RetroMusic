@@ -1,6 +1,7 @@
 package io.github.tima22814.retromusic
 
 import android.Manifest
+import android.content.Context
 import android.content.pm.PackageManager
 import android.content.res.Configuration
 import android.os.Build
@@ -52,8 +53,13 @@ import io.github.tima22814.retromusic.ui.NowPlaying
 class MainActivity : ComponentActivity() {
     private val vm: PlayerViewModel by viewModels()
 
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(AppLanguage.wrap(newBase))
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        AppLanguage.apply(applicationContext)
         setContent {
             val light by vm.lightTheme.collectAsStateWithLifecycle()
             CompositionLocalProvider(LocalPalette provides if (light) LightPalette else DarkPalette) {

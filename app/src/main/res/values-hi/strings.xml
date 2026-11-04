@@ -49,4 +49,6 @@
         <item quantity="one">%d गाना</item>
         <item quantity="other">%d गाने</item>
     </plurals>
+    <string name="language">भाषा</string>
+    <string name="system_language">सिस्टम भाषा</string>
 </resources>

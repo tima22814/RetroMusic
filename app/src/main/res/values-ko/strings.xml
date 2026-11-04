@@ -48,4 +48,6 @@
     <plurals name="songs_count">
         <item quantity="other">노래 %d곡</item>
     </plurals>
+    <string name="language">언어</string>
+    <string name="system_language">시스템 언어</string>
 </resources>

@@ -49,4 +49,6 @@
         <item quantity="one">%d song</item>
         <item quantity="other">%d songs</item>
     </plurals>
+    <string name="language">Language</string>
+    <string name="system_language">System language</string>
 </resources>

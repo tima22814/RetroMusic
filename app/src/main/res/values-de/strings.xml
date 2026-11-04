@@ -49,4 +49,6 @@
         <item quantity="one">%d Titel</item>
         <item quantity="other">%d Titel</item>
     </plurals>
+    <string name="language">Sprache</string>
+    <string name="system_language">Systemsprache</string>
 </resources>

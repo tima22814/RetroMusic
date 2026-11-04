@@ -48,4 +48,6 @@
     <plurals name="songs_count">
         <item quantity="other">%d lagu</item>
     </plurals>
+    <string name="language">Bahasa</string>
+    <string name="system_language">Bahasa sistem</string>
 </resources>

@@ -1,5 +1,6 @@
 package io.github.tima22814.retromusic.ui
 
+import android.app.Activity
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -43,6 +44,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import io.github.tima22814.retromusic.Album
+import io.github.tima22814.retromusic.AppLanguage
 import io.github.tima22814.retromusic.ArtLoader
 import io.github.tima22814.retromusic.Library
 import io.github.tima22814.retromusic.PlaybackState
@@ -119,6 +121,7 @@ data object AlbumsScreen : Screen { override val titleRes = R.string.albums }
 data object GenresScreen : Screen { override val titleRes = R.string.genres }
 data object MoreScreen : Screen { override val titleRes = R.string.more }
 data object HiddenScreen : Screen { override val titleRes = R.string.hidden }
+data object LanguageScreen : Screen { override val titleRes = R.string.language }
 
 /** [message] takes the album / folder [name] as its argument. */
 private data class Confirm(
@@ -228,7 +231,9 @@ fun LibraryUi(
                     onHidden = { push(HiddenScreen) },
                     light = light,
                     onTheme = { vm.setLightTheme(!light) },
+                    onLanguage = { push(LanguageScreen) },
                 )
+                LanguageScreen -> LanguageList()
                 HiddenScreen -> HiddenList(
                     hiddenAlbums, hiddenFolders,
                     onRestoreAlbum = { name ->
@@ -446,7 +451,10 @@ private fun MoreList(
     onHidden: () -> Unit,
     light: Boolean,
     onTheme: () -> Unit,
+    onLanguage: () -> Unit,
 ) {
+    val ctx = LocalContext.current
+    val language = remember { AppLanguage.current(ctx) }
     LazyColumn(Modifier.fillMaxSize()) {
         item {
             ListRow(onGenres, chevron = true) {
@@ -472,10 +480,35 @@ private fun MoreList(
             }
         }
         item {
+            ListRow(onLanguage, chevron = true) {
+                Box(Modifier.width(40.dp)) { Ico(Icons.Globe, 24.dp, C.Fg2) }
+                TwoLines(
+                    stringResource(R.string.language),
+                    AppLanguage.choices.firstOrNull { it.first == language }?.second ?: stringResource(R.string.system_language),
+                    Modifier.weight(1f),
+                )
+            }
+        }
+        item {
             ListRow(onHidden, chevron = true) {
                 Box(Modifier.width(40.dp)) { Ico(Icons.Albums, 24.dp, C.Fg2) }
                 TwoLines(stringResource(R.string.hidden), stringResource(R.string.hidden_sub), Modifier.weight(1f))
                 SideText(hiddenCount.toString())
+            }
+        }
+    }
+}
+
+@Composable
+private fun LanguageList() {
+    val activity = LocalContext.current as Activity
+    val current = remember { AppLanguage.current(activity) }
+    val rows = listOf("" to stringResource(R.string.system_language)) + AppLanguage.choices
+    LazyColumn(Modifier.fillMaxSize()) {
+        items(rows) { (tag, name) ->
+            ListRow({ if (tag != current) AppLanguage.set(activity, tag) }) {
+                TwoLines(name, null, Modifier.weight(1f))
+                if (tag == current) Text("✓", color = C.Fg, fontSize = 18.sp, fontWeight = FontWeight.Bold)
             }
         }
     }

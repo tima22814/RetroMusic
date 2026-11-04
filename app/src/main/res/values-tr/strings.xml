@@ -49,4 +49,6 @@
         <item quantity="one">%d şarkı</item>
         <item quantity="other">%d şarkı</item>
     </plurals>
+    <string name="language">Dil</string>
+    <string name="system_language">Sistem dili</string>
 </resources>

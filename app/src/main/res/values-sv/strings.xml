@@ -49,4 +49,6 @@
         <item quantity="one">%d låt</item>
         <item quantity="other">%d låtar</item>
     </plurals>
+    <string name="language">Språk</string>
+    <string name="system_language">Systemspråk</string>
 </resources>

@@ -48,4 +48,6 @@
     <plurals name="songs_count">
         <item quantity="other">%d bài hát</item>
     </plurals>
+    <string name="language">Ngôn ngữ</string>
+    <string name="system_language">Ngôn ngữ hệ thống</string>
 </resources>

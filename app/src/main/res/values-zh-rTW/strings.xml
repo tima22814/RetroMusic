@@ -48,4 +48,6 @@
     <plurals name="songs_count">
         <item quantity="other">%d 首歌曲</item>
     </plurals>
+    <string name="language">語言</string>
+    <string name="system_language">跟隨系統</string>
 </resources>

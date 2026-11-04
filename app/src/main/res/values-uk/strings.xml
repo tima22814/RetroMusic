@@ -51,4 +51,6 @@
         <item quantity="many">%d пісень</item>
         <item quantity="other">%d пісні</item>
     </plurals>
+    <string name="language">Мова</string>
+    <string name="system_language">Як у системі</string>
 </resources>

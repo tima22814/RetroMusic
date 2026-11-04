@@ -51,4 +51,6 @@
         <item quantity="many">%d skladby</item>
         <item quantity="other">%d skladeb</item>
     </plurals>
+    <string name="language">Jazyk</string>
+    <string name="system_language">Jazyk systému</string>
 </resources>

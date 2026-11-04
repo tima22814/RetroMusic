@@ -50,4 +50,6 @@
         <item quantity="many">%d músicas</item>
         <item quantity="other">%d músicas</item>
     </plurals>
+    <string name="language">Idioma</string>
+    <string name="system_language">Idioma do sistema</string>
 </resources>

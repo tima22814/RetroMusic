@@ -49,4 +49,6 @@
         <item quantity="one">%d nummer</item>
         <item quantity="other">%d nummers</item>
     </plurals>
+    <string name="language">Taal</string>
+    <string name="system_language">Systeemtaal</string>
 </resources>

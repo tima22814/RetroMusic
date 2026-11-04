@@ -51,4 +51,6 @@
         <item quantity="many">%d utworów</item>
         <item quantity="other">%d utworu</item>
     </plurals>
+    <string name="language">Język</string>
+    <string name="system_language">Język systemu</string>
 </resources>
